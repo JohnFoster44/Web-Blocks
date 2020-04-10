@@ -1,0 +1,115 @@
+body{
+    margin:0;
+    --color-text:#a5668b;
+    --color-bg:#d3bcc0;
+    --color-link:#69306d;
+    --color-link-hover: #0e103d;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    font-family: sans-serif;
+}
+
+a:hover,
+a:focus{
+    color: var(--color-link-hover);
+    outline: none;
+}
+
+.menu{
+    user-select: none;
+    padding: 35vh 0 25vh;
+    --marquee-width:100vw;
+    --offset: 20vw;
+    --initial-move: calc(-25% + var(--offset));
+    --final-move: calc(-50% + var(--offset));
+    --item-font-size:10vw;
+    counter-reset: menu;
+}
+
+.menu-item{
+    cursor:default;
+    position: relative;
+    padding: 0 5vw;
+}
+
+.menu-item-link {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    -webkit-text-stroke: 2.5px #69306d;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    transition: opacity 0.4s;
+}
+
+.menu-item-link:before{
+    all: initial;
+    font-family: sans-serif;
+    /* counter-increment: menu;
+    content: counter(menu); */
+    position: absolute;
+    bottom: 60%;
+    left: 0;
+    pointer-events: none;
+}
+
+/* .menu-item-link:hover{
+    transition-duration: 0.1s;
+    opacity: 1;
+    transform: translate3d(calc(-100% - 6vw),-30%,0);
+
+} */
+
+.marq{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--marquee-width);
+    overflow: hidden;
+    pointer-events: none;
+    mix-blend-mode: color-burn;
+}
+
+.marq-inner{
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--initial-move), 0, 0);
+    animation: marquee 10s linear infinite;
+    animation-play-state: paused;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.menu-item-link:hover ~ .marq .marq-inner {
+    animation-play-state: running;
+    opacity: 1;
+    transition-duration: 0.4s;
+}
+
+.marq span {
+    text-align: center;
+}
+
+.menu-item-link,
+.marq span{
+    white-space: nowrap;
+    font-size: var(--item-font-size);
+    padding: 0 1vw;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.marq span{
+    font-style: italic;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translate3d(var(--initial-move), 0, 0);
+	}
+
+	100% {
+		transform: translate3d(var(--final-move), 0, 0);
+	}
+}
