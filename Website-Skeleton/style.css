@@ -1,0 +1,23 @@
+html, body{
+    margin: 0;
+    padding: 2px;
+    background: white;
+}
+
+footer{
+    background: yellow;
+}
+
+.section-a{
+    background-color: yellow;
+    margin: 0 5px;
+    padding: 3px;
+    height: 100vh;
+}
+
+.section-b{
+    background-color: greenyellow;
+    margin: 0px 5px;
+    padding: 3px;
+    height: 100vh;
+}
