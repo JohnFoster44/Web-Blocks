@@ -1,23 +1,63 @@
-html, body{
-    margin: 0;
-    padding: 2px;
-    background: white;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-footer{
-    background: yellow;
+html,
+body {
+  background: white;
+  --section-a-col: yellow;
+  --section-b-col: greenyellow;
+  --head-and-foot: green;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.section-a{
-    background-color: yellow;
-    margin: 0 5px;
-    padding: 3px;
-    height: 100vh;
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
 }
 
-.section-b{
-    background-color: greenyellow;
-    margin: 0px 5px;
-    padding: 3px;
-    height: 100vh;
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+header {
+  background-color: var(--head-and-foot);
+  padding: 5px 5px;
+}
+
+h1 {
+  margin: 5px;
+  text-align: center;
+  font-size: 40px;
+}
+
+footer {
+  background: var(--head-and-foot);
+  padding: 10px 10px;
+}
+
+.section-a {
+  background-color: var(--section-a-col);
+  padding: 10px 10px;
+  height: 100vh;
+}
+
+.section-b {
+  background-color: var(--section-b-col);
+  padding: 10px 10px;
+  height: 100vh;
 }
