@@ -12,7 +12,11 @@ The marquee experiment had an aesthetic that I really like!
 A standard hamburger menu made and animated using pure CSS.
 
 # Profile Card
-a prototype of a profile card. The real experimentation was getting a gradient around the picture. This could be used for a business to showcase their beautiful staff.
+A prototype of a profile card. The real experimentation was getting a gradient around the picture. This could be used for a business to showcase their beautiful staff.
 
 # Responsive Navbar 
-this is also a hamburger menu but different to the CSS one as its responsive - goes from desktop to mobile and changes based on that. Uses JS.
+This is also a hamburger menu but different to the CSS one as its responsive - goes from desktop to mobile and changes based on that. Uses JS.
+
+# Web Skeleton - WIP
+
+A generic one page website skeleton, responsive and ready for a businesses copy. 
