@@ -3,7 +3,6 @@
   padding: 0px;
 }
 
-html,
 body {
   background: white;
   --section-a-col: grey;
@@ -11,6 +10,17 @@ body {
   --head-and-foot: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow-x: hidden;
+}
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+/* header and nav */
+header {
+  background-color: var(--head-and-foot);
+  padding: 5px;
 }
 
 nav {
@@ -34,51 +44,83 @@ nav {
   text-decoration: none;
   letter-spacing: 1px;
   color: lightpink;
+  padding: 5px;
 }
 .nav-links a:hover {
   color: white;
   transition: ease-in-out 0.5s; 
 }
 
-header {
-  background-color: var(--head-and-foot);
-  padding: 5px 5px;
+/* Showcase */
+#showcase{
+  min-height:400px;
+  background:url('https://images.unsplash.com/photo-1590397883410-ddccd55ef3d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80') no-repeat 0 -400px;
+  text-align:center;
+  color:#ffffff;
 }
 
-h1 {
-  color: lightpink;
-  margin: 5px;
+#showcase h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#showcase p{
+  font-size:20px;
+}
+
+/* Boxes */
+#boxes{
+  margin-top:20px;
+}
+
+#boxes .box{
+  float:left;
   text-align: center;
-  font-size: 40px;
+  width:30%;
+  padding:10px;
+}
+
+#boxes .box img{
+  width:90px;
+}
+
+/* contact */
+
+#contact{
+  text-align: center;
+  margin: 20px;
 }
 
 footer {
   background: var(--head-and-foot);
-  padding: 10px 10px;
+  color: aliceblue;
+  text-align: center;
 }
 
-.section-a {
-  position: relative;
-  background-color: var(--section-a-col);
-  padding: 10px 10px;
-  height: 100vh;
-}
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
 
-.section-b {
-  background-color: var(--section-b-col);
-  padding: 10px 10px;
-  height: 100vh;
-}
+  header{
+    padding-bottom:20px;
+  }
 
-.images{
-  display: flex;
-  width: 100vw;
-  height: auto;
-}
+  #showcase h1{
+    margin-top:40px;
+  }
 
-.images img{
-  align-items: center;
-  justify-content: space-around;
-  padding: 5px;
+  #contact{
 
+  }
 }

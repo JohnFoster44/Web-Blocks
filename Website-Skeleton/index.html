@@ -8,8 +8,11 @@
   </head>
   <body>
     <header>
-      <div>
-        <div><h1>COMPANY</h1></div>
+      <div class="container">
+        <div class="brand">
+          <h1>COMPANY</h1>
+        </div>
+
         <nav>
           <ul class="nav-links">
             <li><a href="#">Home</a></li>
@@ -20,46 +23,62 @@
       </div>
     </header>
 
-    <div class="section-a">
-      <div class="images">
-        <img
-          src=""
-          alt=""
-        />
+    <section id="showcase">
+      <div class="container">
+        <h1>WOW what a cool site!</h1>
+        <p>i really like it</p>
       </div>
-    </div>
-    <div class="section-b">
-      <p>BLOG</p>
-      <div>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nihil
-        magnam rerum beatae eius, eaque facilis at maiores autem, incidunt
-        corporis inventore neque quidem quas excepturi officia quisquam harum
-        voluptatibus.
-      </div>
+    </section>
 
-      <div class="images">
-        <img
-          src="https://images.unsplash.com/photo-1590112692352-90e684a38a90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590112692352-90e684a38a90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/photo-1590112692352-90e684a38a90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60"
-          alt=""
-        />
+    <section id="boxes">
+      <div class="container">
+        <div class="box">
+          <img src="./img/logo_html.png" />
+          <h3>Words</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi
+            augue, viverra sit amet ultricies
+          </p>
+        </div>
+        <div class="box">
+          <img src="./img/logo_css.png" />
+          <h3>Words</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi
+            augue, viverra sit amet ultricies
+          </p>
+        </div>
+        <div class="box">
+          <img src="./img/logo_brush.png" />
+          <h3>words</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi
+            augue, viverra sit amet ultricies
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h1>GET IN TOUCH</h1>
+        <form>
+          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Email" />
+          <textarea name="Subject" cols="30" rows="10"></textarea>
+        </form>
+      </div>
+    </section>
 
     <footer>
-      <div>
-        <p>one</p>
-        <p>two</p>
-        <p>three</p>
-        <p>four</p>
-      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>John Foster &copy; 2020</p>
     </footer>
   </body>
 </html>
