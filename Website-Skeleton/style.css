@@ -1,28 +1,21 @@
+/* global */
 * {
   margin: 0px;
   padding: 0px;
 }
 
 body {
-  background: white;
-  --section-a-col: grey;
-  --section-b-col: lightpink;
-  --head-and-foot: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow-x: hidden;
 }
-.container{
-  width:80%;
-  margin:auto;
-  overflow:hidden;
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
 
 /* header and nav */
-header {
-  background-color: var(--head-and-foot);
-  padding: 5px;
-}
-
 nav {
   display: flex;
   justify-content: space-around;
@@ -33,7 +26,6 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 30%;
 }
 
 .nav-links li {
@@ -43,84 +35,98 @@ nav {
 .nav-links a {
   text-decoration: none;
   letter-spacing: 1px;
-  color: lightpink;
   padding: 5px;
 }
+
 .nav-links a:hover {
-  color: white;
-  transition: ease-in-out 0.5s; 
+  transition: ease-in-out 0.5s;
+}
+
+.brand {
+  text-align: center;
+  margin: 10px 0 0 0;
 }
 
 /* Showcase */
-#showcase{
-  min-height:400px;
-  background:url('https://images.unsplash.com/photo-1590397883410-ddccd55ef3d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80') no-repeat 0 -400px;
-  text-align:center;
-  color:#ffffff;
+#showcase {
+  min-height: 400px;
+  background: url("https://images.unsplash.com/photo-1520531158340-44015069e78e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2276&q=80")
+    no-repeat 0 -400px;
+  text-align: center;
 }
 
-#showcase h1{
-  margin-top:100px;
-  font-size:55px;
-  margin-bottom:10px;
+#showcase h1 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
 }
 
-#showcase p{
-  font-size:20px;
+#showcase p {
+  font-size: 20px;
 }
 
 /* Boxes */
-#boxes{
-  margin-top:20px;
+#boxes {
+  margin-top: 20px;
 }
 
-#boxes .box{
-  float:left;
+#boxes .box {
+  float: left;
   text-align: center;
-  width:30%;
-  padding:10px;
+  width: 30%;
+  padding: 10px;
 }
 
-#boxes .box img{
-  width:90px;
+#boxes .box img {
+  width: 90px;
 }
 
 /* contact */
-
-#contact{
+#contact {
+  display: flex;
   text-align: center;
   margin: 20px;
 }
 
+input,
+textarea,
+button {
+  width: 50%;
+  padding: 4px;
+  margin: 5px;
+  border: black solid 1px;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+button:active {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
 footer {
-  background: var(--head-and-foot);
-  color: aliceblue;
   text-align: center;
 }
 
-@media(max-width: 768px){
-  header #branding,
-  header nav,
-  header nav li,
-  #newsletter h1,
-  #newsletter form,
-  #boxes .box,
-  article#main-col,
-  aside#sidebar{
-    float:none;
-    text-align:center;
-    width:100%;
+/* media */
+@media (max-width: 768px) {
+  #boxes .box {
+    float: none;
+    text-align: center;
+    width: 100%;
   }
 
-  header{
-    padding-bottom:20px;
-  }
-
-  #showcase h1{
-    margin-top:40px;
-  }
-
-  #contact{
-
+  input,
+  textarea,
+  button {
+    width: 90%;
+    padding: 4px;
+    margin: 5px;
+    border: black solid 1px;
   }
 }
