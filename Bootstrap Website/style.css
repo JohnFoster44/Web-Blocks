@@ -58,3 +58,6 @@ button:focus {
   outline-offset: -4px;
 }
 
+.scrolled{
+  background-color:red;
+}

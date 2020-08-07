@@ -146,15 +146,15 @@ button:focus {
   width: 50vw;
 }
 
-.info p{
-  padding: 2px;
-  font-size: 2em;
+.info-2{
+  display: flex;
+  align-items: center;
+  width: 50vw;
 }
 
-.info img{
-  align-items: center;
-  justify-content: center;
-  /* padding-left: 18%; */
+.info, .info-2 p{
+  padding: 2px;
+  font-size: 2em;
 }
 
 
@@ -165,10 +165,10 @@ button:focus {
 }
 
 .burger div {
-  width: 25px;
-  height: 3px;
+  width: 35px;
+  height: 4px;
   margin: 3px;
-  background-color: #000;
+  background-color: var(--text);
   transition: all 0.3s ease;
 }
 
@@ -176,7 +176,7 @@ button:focus {
   width: 25px;
   height: 3px;
   margin: 3px;
-  background-color: #ffffff;
+  background-color: var(--bkg);
   transition: all 0.3s ease;
 }
 
@@ -192,7 +192,7 @@ button:focus {
 }
 
 .nav-links a {
-  color: #000;
+  color: var(--bkg);
   text-decoration: none;
   letter-spacing: 1px;
 }
@@ -213,7 +213,7 @@ footer{
     right: 0px;
     height: 92vh;
     top: 13vh;
-    background-color: #2e73b0;
+    background-color: var(--text);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,6 +231,10 @@ footer{
   .burger {
     display: block;
     padding: 0px 0 5px 40px;
+  }
+
+  .info-2{
+    display: hidden;
   }
 
   .nav-active {
