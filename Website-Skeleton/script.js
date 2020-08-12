@@ -10,6 +10,7 @@ const navLinks = document.querySelectorAll(".nav-links li");
 window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 0);
   burger.classList.toggle('sticky', window.scrollY > 0);
+  nav.classList.toggle('sticky', window.scrollY > 0);
 });
 
 // ------------------- burger nav ---------------------
@@ -17,6 +18,7 @@ const navSlide = () => {
   //   toggle the nav burger
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
+    console.log('hello');
 
     //   animate the links
     navLinks.forEach((link, index) => {
