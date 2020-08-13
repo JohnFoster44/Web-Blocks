@@ -125,16 +125,14 @@ button {
 button:hover {
   background: var(--alt-text)
 }
-button:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px;
-}
 
 .content{
   display: flex;
   padding: 20px;
   height: 85vh;
   background-color: var(--bkg-alt);
+  align-items: center;
+  justify-content: center;
 }
 
 .content:nth-of-type(odd){
@@ -142,18 +140,16 @@ button:focus {
 }
 
 .info{
-  display: flex;
   align-items: center;
   width: 50vw;
-  padding: 30px;
+  padding: 20px 20px;
   font-size: 1.5em;
 }
 
 .image{
-  display: flex;
+  height: 100%;
   width: 50vw;
-  height: 50vh;
-  margin: 20px;
+  padding: 0 20px;
   background: url(https://images.pexels.com/photos/4464377/pexels-photo-4464377.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
   background-size: auto;
   background-position: center;
@@ -204,7 +200,50 @@ button:focus {
   letter-spacing: 1px;
 }
 
+.form-style{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+form{
+  width: 50%;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--light-main);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=submit] {
+  background-color: var(--light-main);
+  color: var(--bkg);
+  padding: 17px 60px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: ease 0.6s;
+}
+
+input[type=submit]:hover {
+  background-color: var(--alt-text);
+}
+
+.form-info{
+  width: 50%;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
 footer{
+  border-top: solid var(--text) 1px;
+  padding: 15px;
   text-align: center;
   font-weight: 800;
   letter-spacing: 5px;
@@ -259,7 +298,7 @@ footer{
 
   .image{
     padding: 50px;
-    height: 150vh;
+    height: 100vh;
     width: 100vw;
     margin: 0;
   }
@@ -272,6 +311,10 @@ footer{
 
   .nav-active {
     transform: translateX(0%);
+  }
+
+  form{
+    width: 80%;
   }
 
   @keyframes navLinkFade {
