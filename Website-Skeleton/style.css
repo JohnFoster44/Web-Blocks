@@ -6,19 +6,18 @@
   /* overflow-x: hidden; */
 }
 
-:root{
-  --bkg:#eee;
-  --bkg-alt:#ccc;
-  --light-main:#666;
-  --text:#333;
-  --alt-text:#999;
+:root {
+  --bkg: #eee;
+  --bkg-alt: #ccc;
+  --light-main: #666;
+  --text: #333;
+  --alt-text: #999;
 }
 
 body {
-  background:var(--bkg);
+  background: var(--bkg);
   min-height: 200vh;
 }
-
 
 /* HEADER */
 header {
@@ -108,7 +107,7 @@ header.sticky ul li a {
 
 button {
   background: var(--light-main);
-  transition: background ease .25s;
+  transition: background ease 0.25s;
   border-radius: 5px;
   display: inline-block;
   border: none;
@@ -123,10 +122,10 @@ button {
   -moz-appearance: none;
 }
 button:hover {
-  background: var(--alt-text)
+  background: var(--alt-text);
 }
 
-.content{
+.content {
   display: flex;
   padding: 20px;
   height: 85vh;
@@ -135,18 +134,18 @@ button:hover {
   justify-content: center;
 }
 
-.content:nth-of-type(odd){
+.content:nth-of-type(odd) {
   background-color: var(--bkg);
 }
 
-.info{
+.info {
   align-items: center;
   width: 50vw;
   padding: 20px 20px;
   font-size: 1.5em;
 }
 
-.image{
+.image {
   height: 100%;
   width: 50vw;
   padding: 0 20px;
@@ -193,25 +192,28 @@ button:hover {
   text-decoration: none;
   letter-spacing: 1px;
 }
-.nav-links a:hover{
+.nav-links a:hover {
   color: var(--bkg-alt);
   text-decoration: underline wavy;
   line-height: 2px;
   letter-spacing: 1px;
 }
 
-.form-style{
+.form-style {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 40%;
 }
 
-form{
+.form-info {
   width: 50%;
+  padding: 20px;
+  font-size: 1.5em;
 }
 
-input[type=text], select, textarea {
+input[type="text"],
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid var(--light-main);
@@ -221,7 +223,7 @@ input[type=text], select, textarea {
   margin-bottom: 16px;
 }
 
-input[type=submit] {
+input[type="submit"] {
   background-color: var(--light-main);
   color: var(--bkg);
   padding: 17px 60px;
@@ -231,17 +233,11 @@ input[type=submit] {
   transition: ease 0.6s;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: var(--alt-text);
 }
 
-.form-info{
-  width: 50%;
-  padding: 20px;
-  font-size: 1.5em;
-}
-
-footer{
+footer {
   border-top: solid var(--text) 1px;
   padding: 15px;
   text-align: center;
@@ -255,7 +251,7 @@ footer{
     overflow-x: hidden;
   }
 
-  header .logo{
+  header .logo {
     float: left;
   }
 
@@ -290,20 +286,20 @@ footer{
     padding: 0px 0 5px 0px;
   }
 
-  .content{
+  .content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .image{
+  .image {
     padding: 50px;
     height: 100vh;
     width: 100vw;
     margin: 0;
   }
 
-  .info{
+  .info {
     font-size: 1em;
     text-align: left;
     width: 98vw;
@@ -313,7 +309,20 @@ footer{
     transform: translateX(0%);
   }
 
-  form{
+  .form-info {
+    width: 100%;
+    padding: 20px;
+    font-size: 1em;
+  }
+
+  .form-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  form {
     width: 80%;
   }
 
@@ -329,16 +338,26 @@ footer{
   }
 }
 
-@media (min-width: 320px) { ... }
+@media (min-width: 320px) {
+  ...;
+}
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+@media (min-width: 576px) {
+  ...;
+}
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+@media (min-width: 768px) {
+  ...;
+}
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+@media (min-width: 992px) {
+  ...;
+}
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+@media (min-width: 1200px) {
+  ...;
+}
