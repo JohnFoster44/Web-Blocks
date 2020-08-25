@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: pink;
+}
+
+nav button{
+    padding: 8px 24px;
+    background-color: lavender;
+    font-size: 1em;
+}
+
+nav .socials i{
+    padding: 5px 10px;
+    color: lightskyblue;
+}
+
+.drop {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.drop:active .drop-content {display: block;}
+
+#dragger{
+    position: absolute;
+    z-index: 9;
+    background-color: lavenderblush;
+    border: 4px lavender solid;
+    text-align: center;
+    padding: 0 0 100px 0;
+    width: 600px;
+    height: auto;
+    resize: both;
+    overflow: auto;
+}
+
+#draggerheader{
+    cursor: move;
+    z-index: 10;
+    width: 100%;
+    background-color: lightpink;
+    color: lightskyblue;
+}
+
+
+#show-button{
+    padding:10px 20px;
+    margin: 20px;
+    background-color: pink;
+}
+.hidden{
+    display: none;
+}
