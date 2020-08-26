@@ -1,0 +1,41 @@
+* {
+  background: var(--blue);
+}
+
+:root {
+  --blue: #c8f7ff;
+  --navy: #001152;
+  --pink: #ff8ad7;
+  --yellow: #fff029;
+}
+
+.riah-logo {
+  height: auto;
+  width: 800px;
+}
+
+.custom-text {
+  color: #001152;
+  text-shadow: -2px 2px var(--yellow);
+  font-family: "Pacifico", cursive;
+}
+
+button {
+  padding: 5px;
+  height: 3em;
+  width: 10em;
+  border: 2px solid var(--navy);
+  border-radius: 50px;
+  background: var(--yellow);
+  font-size: 20px;
+}
+
+ul {
+  list-style: none outside none;
+}
+
+footer {
+  text-shadow: none;
+  border-top: 1px solid var(--navy);
+  padding-top: 4px;
+}

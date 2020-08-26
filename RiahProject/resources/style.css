@@ -50,13 +50,12 @@ nav .socials i{
 }
 
 #draggerheader{
-    cursor: move;
+    cursor: grab;
     z-index: 10;
     width: 100%;
     background-color: lightpink;
     color: lightskyblue;
 }
-
 
 #show-button{
     padding:10px 20px;
