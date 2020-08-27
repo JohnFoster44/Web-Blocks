@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background-image: url(/RiahProject/resources/icon2.png); */
+    background-size: 2%;
+    background-repeat: repeat;
+    background-color: lightblue;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: lightgray;
+    border: lightgray 2px ridge;
+    padding: 2px;
+}
+
+nav button{
+    padding: 8px 24px;
+    background-color: lavender;
+    font-size: 1em;
+}
+
+nav .socials i{
+    padding: 5px 10px;
+    color: black;
+}
+
+.drop {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.drop-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.drop-btn img {
+    height: auto;
+    width: 30%;
+}
+
+.drop:active .drop-content {display: block;}
+
+.hidden{
+    display: none;
+}
+
+#desktop{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.icon-container{
+    border: black 1px solid;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    width: 20%;
+    padding: 10px;
+}
+
+#dragger{
+    position: absolute;
+    z-index: 9;
+    background-color: lavenderblush;
+    border: 4px lavender solid;
+    text-align: center;
+    padding: 0 0 100px 0;
+    width: 600px;
+    height: auto;
+    resize: both;
+    overflow: auto;
+}
+
+#dragger img{
+    height: auto;
+    width: 50%;
+}
+
+#draggerheader{
+    cursor: grab;
+    z-index: 10;
+    width: 100%;
+    background-color: lightpink;
+    color: lightskyblue;
+}
+
+#hide-button{
+    cursor: pointer;
+}
+
+#show-button{
+    padding:10px 20px;
+    margin: 20px;
+    /* background-color: pink; */
+    cursor: pointer;
+}
+#show-button img{
+  height: auto;
+  width: 200px;
+}

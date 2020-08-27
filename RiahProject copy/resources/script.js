@@ -1,5 +1,5 @@
 document.getElementById("hide-button").addEventListener("click", hide);
-document.getElementById("icon-container").addEventListener("click", show);
+document.getElementById("show-button").addEventListener("click", show);
 
 
 // hiding buttons ------------------------------------------------------------
