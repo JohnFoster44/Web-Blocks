@@ -11,17 +11,10 @@
   --yellow: #fff029;
 }
 
-html {
-  --scrollbarBG: lightblue;
-  --thumbBG: lightpink;
-}
-
 body {
   background-size: 2%;
   background-repeat: repeat;
-  background-color: var(--blue);
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  background-color: var(--blue)
 }
 
 /* NavBar */
@@ -29,8 +22,7 @@ nav {
   height: 34px;
   display: flex;
   justify-content: space-between;
-  background: lightpink;
-  border: outset;
+  background: #ffb6c180;
 }
 
 nav a{
@@ -39,6 +31,8 @@ nav a{
 
 .logo-left{
     padding: 2px;
+
+    overflow: hidden;
 }
 
 /* pop up window  */
@@ -71,7 +65,6 @@ nav a{
 
 #icon-container p {
   padding-top: 55px;
-
   padding-left: 10px;
 }
 

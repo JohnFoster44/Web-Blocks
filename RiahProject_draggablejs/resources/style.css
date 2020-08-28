@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+:root {
+  --blue: #c8f7ff;
+  --navy: #001152;
+  --pink: #ff8ad7;
+  --yellow: #fff029;
+}
+
+body {
+  background-size: 2%;
+  background-repeat: repeat;
+  background-color: var(--blue);
+}
+
+/* NavBar */
+nav {
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+  background: lightpink;
+  border: none;
+
+}
+
+nav a{
+    padding-top: 7px;
+}
+
+/* ------------------------------ dragging/ windows ------------------------------------ */
+.draggable {
+  touch-action: none;
+  user-select: none;
+}
+
+#drag-1, #drag-2 {
+  background-color: lightpink;
+  margin: 10px;
+  border: 4px lavender ridge;
+  /* padding: 0 0 100px 0; */
+  box-shadow: 6px 6px #00000080;
+
+  height: 45%;
+  width: 25%;
+  overflow: auto;
+  touch-action: none;
+  user-select: none;
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+.resize-drag{
+  color: #ff8ad7;
+  box-sizing: border-box;
+}
+
+.hidden{
+  display: none;
+}
+
+/* ---------- */
+#desktop {
+  display: inline-flex;
+  justify-content: left;
+  padding: 30px;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/RiahProject/ComingSoon/riah_logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.socials{
+    display: flex;
+    color: white;
+    overflow-y: hidden;
+    justify-content: space-around;
+    width: 100px;
+}

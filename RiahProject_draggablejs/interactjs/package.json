@@ -1,0 +1,73 @@
+{
+  "_from": "interactjs",
+  "_id": "interactjs@1.9.22",
+  "_inBundle": false,
+  "_integrity": "sha512-zUQefYtYJTazWKqDCSYV0vMJPFWp/PKXwpA3v75fD3+4+4J3/ItjlO7K3L1CpNWYU6s8uoEmwwOD6uDy6OoI/w==",
+  "_location": "/interactjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "interactjs",
+    "name": "interactjs",
+    "escapedName": "interactjs",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/interactjs/-/interactjs-1.9.22.tgz",
+  "_shasum": "5ae98d2dd46d720cccdb89222b4e1ddcbe5cfeb9",
+  "_spec": "interactjs",
+  "_where": "/Users/john/Desktop/web dev/Web-Blocks/RiahProject_draggablejs",
+  "authors": [
+    {
+      "name": "Taye Adeyemi",
+      "email": "dev@taye.me",
+      "url": "https://taye.me"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/taye/interact.js/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@interactjs/types": "1.9.22"
+  },
+  "deprecated": false,
+  "description": "Drag and drop, resizing and multi-touch gestures with inertia and snapping for modern browsers (and also IE9+)",
+  "homepage": "https://interactjs.io",
+  "keywords": [
+    "interact.js",
+    "draggable",
+    "droppable",
+    "drag",
+    "drop",
+    "drag and drop",
+    "resize",
+    "touch",
+    "multi-touch",
+    "gesture",
+    "snap",
+    "inertia",
+    "grid",
+    "autoscroll",
+    "SVG",
+    "interact"
+  ],
+  "license": "MIT",
+  "main": "dist/interact.min.js",
+  "name": "interactjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taye/interact.js.git"
+  },
+  "scripts": {
+    "test": "cd ../; npm test"
+  },
+  "typings": "index.d.ts",
+  "version": "1.9.22"
+}
