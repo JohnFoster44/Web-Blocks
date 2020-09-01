@@ -9,34 +9,47 @@
       crossorigin="anonymous"
     ></script>
     <!-- css -->
-    <link rel="stylesheet" href="/RiahProject_draggablejs/resources/style.css" />
+    <link
+      rel="stylesheet"
+      href="/RiahProject_draggablejs/resources/style.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 
     <!-- ---------------- -->
     <title>Riah_TEST</title>
   </head>
   <body>
-
     <nav>
-      <a href="">The Riah Hair Studio</a>
+      <div class="dropdown">
+        <button onclick="menuButton()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
 
       <div class="socials">
         <i class="fab fa-facebook-square fa-2x"></i>
         <i class="fab fa-instagram fa-2x"></i>
       </div>
     </nav>
-
+    <!-- desktop -->
     <div id="desktop">
-    <!-- ABOUT -->
 
-    <div data-x=0 data-y=0 id="drag-1" class=" resize-drag">
-      <p> You can drag </p>
-    </div>
+      <div id="drag-1" class="draggable">
+        <div class="window-header"><button id="hide">X</button></div>
+        <div class="window-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptatibus, dignissimos ea deleniti eius dolore fuga! Iusto dolore consequuntur dolorum, voluptatem laborum distinctio, maiores placeat et maxime voluptates, laudantium quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi illo illum vitae excepturi ducimus nemo inventore, nobis velit explicabo consequatur alias non! Voluptatem beatae repellendus ab sapiente iste corporis.</div>
+      </div>
 
-    <div id="drag-2" class="resize-drag">
-      <p> with each pointer </p>
-    </div>
-    
+      <div class="icons">
+        <img src="/RiahProject_draggablejs/resources/icon2.png">
+      </div>
+
+      <!-- <div id="drag-2" class="draggable">
+    </div> -->
     </div>
     <!-- js -->
     <script src="/RiahProject_draggablejs/resources/script.js"></script>
