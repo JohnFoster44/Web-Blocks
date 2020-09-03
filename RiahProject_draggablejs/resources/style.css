@@ -39,9 +39,12 @@ nav {
 .socials i {
   padding: 3px;
 }
-.socials i:hover{
+.socials i:hover {
   color: #c8f7ff;
   transition: 0.1s;
+  cursor: -webkit-pointer;
+  cursor: -moz-pointer;
+  cursor: pointer;
 }
 
 /* Dropdown Button */
@@ -57,7 +60,11 @@ nav {
 
 /* Dropdown button on hover & focus */
 
-.dropbtn:active{
+.dropbtn:active {
+  background-color: gray;
+  border: inset;
+}
+.active {
   background-color: gray;
   border: inset;
 }
@@ -87,8 +94,8 @@ nav {
   display: block;
 }
 
-.dropdown-content img{
-  padding: 0 20px 0 0 ;
+.dropdown-content img {
+  padding: 0 20px 0 0;
 }
 
 /* Change color of dropdown links on hover */
@@ -106,9 +113,6 @@ nav {
   touch-action: none;
   user-select: none;
   z-index: 0;
-  cursor: -webkit-grab;
-  cursor:    -moz-grab;
-  cursor:         grab;
 }
 
 #drag-1,
@@ -131,24 +135,31 @@ nav {
   display: none;
 }
 
-#hide{
+#hide {
   background-color: lightgrey;
   margin: 2px;
   padding: 3px 6px;
-  
 }
 
-#hide:active{
+#hide:active {
   background-color: white;
 }
 
-.window-header{
+.window-header {
   background-color: lightblue;
   margin: 4px;
   height: 28px;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+.window-header:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
 }
 
-.window-content{
+.window-content {
   border: inset lavender;
   background: lavenderblush;
   margin: 5px;
@@ -169,39 +180,39 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
-
 }
 
-.icon-container{
+.icon-container {
   margin-top: 6px;
 }
+.icons img:hover {
+  cursor: pointer;
+}
 
-.icons{
+.icons {
   display: flex;
   /* border: blueviolet solid; */
   overflow-y: hidden;
   justify-content: space-evenly;
 }
 
-.icons img{
+.icons img {
   border: dotted blue 0.5px;
   height: auto;
   width: 40px;
   padding: 8px;
 }
 
-@media (min-width: 768px) {  
+@media (min-width: 768px) {
   #drag-1,
-  #drag-2{
+  #drag-2 {
     width: 70vw;
   }
-  
 }
 
 @media (min-width: 992px) {
- 
-#drag-1,
-#drag-2{
-  width: 70vw;
-}
+  #drag-1,
+  #drag-2 {
+    width: 70vw;
+  }
 }
