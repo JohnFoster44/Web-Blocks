@@ -9,72 +9,53 @@
       crossorigin="anonymous"
     ></script>
     <!-- css -->
-    <link rel="stylesheet" href="/RiahProject/resources/style.css" />
+    <link
+      rel="stylesheet"
+      href="/RiahProject_draggablejs/resources/style.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+    <!-- ---------------- -->
     <title>Riah_TEST</title>
   </head>
   <body>
     <nav>
-      <a class="logo-left">
-        <img src="/RiahProject/resources/icon2.png" />
-      </a>
-      <a href="">The Riah Hair Studio</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#"><img src="/RiahProject_draggablejs/resources/glob.png">Link 1</a>
+          <a href="#"><img src="/RiahProject_draggablejs/resources/glob.png">Link 1</a>
+          <a href="#"><img src="/RiahProject_draggablejs/resources/glob.png">Link 1</a>
+          <a href="#"><img src="/RiahProject_draggablejs/resources/glob.png">Link 1</a>
+          <a href="#"><img src="/RiahProject_draggablejs/resources/glob.png">Link 1</a>
+        </div>
+      </div>
 
       <div class="socials">
         <i class="fab fa-facebook-square fa-2x"></i>
         <i class="fab fa-instagram fa-2x"></i>
       </div>
     </nav>
-
+    <!-- desktop -->
     <div id="desktop">
-      <div id="icon-container">
-        <a id="show-button"></a>
-        <p>About</p>
+
+      <div class="icon-container">
+        <div class="icons">
+          <img src="/RiahProject_draggablejs/resources/glob.png">
+          <img src="/RiahProject_draggablejs/resources/defrag.png">
+          <img src="/RiahProject_draggablejs/resources/disk.png">
+          <img src="/RiahProject_draggablejs/resources/book.png">
+          <img src="/RiahProject_draggablejs/resources/recycle.png">
+        </div>
       </div>
 
-      <!-- ABOUT -->
-      <div id="dragger" class="hidden">
-        <div id="draggerheader">
-          <!-- <p>~DLX//BTQ~</p> -->
-          <button id="hide-button"><i class="fas fa-times fa"></i></button>
-        </div>
-        <div class="window-content">
-          <p>About</p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, neque
-            ut nostrum similique rem tempore id harum nesciunt, voluptate facilis
-            reiciendis eveniet, ducimus minima reprehenderit quisquam mollitia
-            officiis explicabo ex.
-          </p>
-          <img
-            src="https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            alt=""
-          />
-        </div>
+      <div id="drag-1" class="draggable">
+        <div class="window-header"><button id="hide">X</button>About</div>
+        <div class="window-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptatibus, dignissimos ea deleniti eius dolore fuga! Iusto dolore consequuntur dolorum, voluptatem laborum distinctio, maiores placeat et maxime voluptates, laudantium quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi illo illum vitae excepturi ducimus nemo inventore, nobis velit explicabo consequatur alias non! Voluptatem beatae repellendus ab sapiente iste corporis.</div>
       </div>
-      
-      <div id="dragger" class="hidden">
-        <div id="draggerheader">
-          <!-- <p>~DLX//BTQ~</p> -->
-          <button id="hide-button"><i class="fas fa-times fa"></i></button>
-        </div>
-        <div class="window-content">
-          <p>About</p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, neque
-            ut nostrum similique rem tempore id harum nesciunt, voluptate facilis
-            reiciendis eveniet, ducimus minima reprehenderit quisquam mollitia
-            officiis explicabo ex.
-          </p>
-          <img
-            src="https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            alt=""
-          />
-        </div>
-      </div>
-      <!-- More 2 Come -->
+
     </div>
-
     <!-- js -->
-    <script src="/RiahProject/resources/script.js"></script>
+    <script src="/RiahProject_draggablejs/resources/script.js"></script>
   </body>
 </html>

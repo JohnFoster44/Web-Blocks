@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+:root {
+  --blue: #c8f7ff;
+  --navy: #001152;
+  --pink: #ff8ad7;
+  --yellow: #fff029;
+}
+
+body {
+  background-size: 2%;
+  background-repeat: repeat;
+  background-color: var(--blue)
+}
+
+/* NavBar */
+nav {
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffb6c180;
+}
+
+nav a{
+    padding-top: 7px;
+}
+
+.logo-left{
+    padding: 2px;
+
+    overflow: hidden;
+}
+
+/* pop up window  */
+.hidden {
+  display: none;
+}
+
+#desktop {
+  display: flex;
+  justify-content: left;
+  padding: 30px;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/RiahProject/ComingSoon/riah_logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#icon-container {
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+  background-image: url(/RiahProject/resources/icon2.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#icon-container p {
+  padding-top: 55px;
+  padding-left: 10px;
+}
+
+#icon-container:hover{
+    border: 1px dotted black;
+}
+#icon-container:active{
+    border: 1px solid black;
+}
+
+#dragger {
+  position: absolute;
+  z-index: 9;
+  background-color: lightpink;
+  border: 4px lavender ridge;
+  padding: 0 0 100px 0;
+  width: 45%;
+  box-shadow: 6px 6px #00000080;
+  height: auto;
+  resize: both;
+  overflow: auto;
+}
+
+#dragger img {
+  height: auto;
+  width: 50%;
+}
+
+#draggerheader {
+  cursor: grab;
+  z-index: 10;
+  width: 100%;
+  background-color: blue;
+  color: lightskyblue;
+}
+#draggerheader:active{
+  cursor: grabbing;
+}
+
+.window-content{
+    padding-top: 5px;
+    margin:25px 15px 15px 15px;
+    border: inset;
+    background-color: lavender;
+}
+
+#hide-button {
+  cursor: pointer;
+  padding: 5px 8px;
+  border: outset 2px;
+}
+
+#show-button img {
+  height: auto;
+  width: 200px;
+}
+
+.socials{
+    display: flex;
+    overflow-y: hidden;
+    justify-content: space-around;
+    width: 100px;
+}
