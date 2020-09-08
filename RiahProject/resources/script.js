@@ -56,3 +56,26 @@ function dragMoveListener(event) {
   target.setAttribute("data-x", x);
   target.setAttribute("data-y", y);
 }
+
+// Window POPOP
+
+const desktop = document.querySelector('#dtwindow');
+var icons = document.querySelector('.icons');
+
+const about = `
+  <div data='about' id="drag-1" class="draggable">
+    <div class="window-header"><button id="hide">X</button>About</div>
+    <div class="window-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptatibus, dignissimos ea deleniti eius dolore fuga! Iusto dolore consequuntur dolorum, voluptatem laborum distinctio, maiores placeat et maxime voluptates, laudantium quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi illo illum vitae excepturi ducimus nemo inventore, nobis velit explicabo consequatur alias non! Voluptatem beatae repellendus ab sapiente iste corporis.</div>
+  </div>
+`
+
+const look = `
+  <div id="drag-2" class="draggable">
+    <div class="window-header"><button id="hide">X</button>Look</div>
+    <div class="window-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptatibus, dignissimos ea deleniti eius dolore fuga! Iusto dolore consequuntur dolorum, voluptatem laborum distinctio, maiores placeat et maxime voluptates, laudantium quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi illo illum vitae excepturi ducimus nemo inventore, nobis velit explicabo consequatur alias non! Voluptatem beatae repellendus ab sapiente iste corporis.</div>
+  </div>
+`
+icons.addEventListener('click', function() {
+  desktop.innerHTML = about;
+
+});
