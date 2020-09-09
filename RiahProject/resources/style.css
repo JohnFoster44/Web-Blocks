@@ -15,6 +15,7 @@ body {
   background-repeat: repeat;
   background-color: var(--blue);
   height: 100vh;
+  color: var(--navy);
 }
 
 /* NavBar --------------------------~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -23,16 +24,16 @@ nav {
   display: flex;
   padding: 2px 2px 3px 2px;
   justify-content: space-between;
-  background: lightpink;
-  border-bottom: outset 2px;
+  background: var(--pink);
+  border-bottom: outset var(--pink) 2px;
 }
 
 .socials {
   display: flex;
   justify-content: space-around;
-  border: ridge lavender 2px;
+  border: ridge lightpink 2px;
   background-color: lavenderblush;
-  color: black;
+  color: var(--navy);
   width: 100px;
 }
 
@@ -112,12 +113,11 @@ nav {
 .draggable {
   touch-action: none;
   user-select: none;
-  z-index: 0;
+  /* z-index: 0; */
 }
 
-#drag-1,
-#drag-2 {
-  background-color: lightpink;
+#drag {
+  background-color: var(--pink);
   margin: 10px;
   border: 2px lavender outset;
   box-shadow: 6px 6px #00000080;
@@ -146,13 +146,16 @@ nav {
 }
 
 .window-header {
-  background-color: lightblue;
+  background-color: var(--blue);
   margin: 4px;
   height: 28px;
+  font-size: 1.1rem;
+  
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
 }
+
 .window-header:active {
   cursor: -webkit-grabbing;
   cursor: -moz-grabbing;
@@ -171,18 +174,24 @@ nav {
 #desktop {
   height: 100vh;
   width: 100vw;
-  z-index: 1;
 
   flex-direction: column;
   justify-content: space-evenly;
 
-  background-image: url(/RiahProject/ComingSoon/riah_logo.png);
+  background-image: url(/RiahProject/riah_logo.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 80%;
+  background-size: 50%;
+}
+
+.static{
+  position: absolute;
+  z-index: 1;
 }
 
 #dtwindow{
+  position: absolute;
+  z-index: 2;
   height: 100vh;
   width: 100vw;
 }

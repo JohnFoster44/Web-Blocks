@@ -63,19 +63,53 @@ const desktop = document.querySelector('#dtwindow');
 var icons = document.querySelector('.icons');
 
 const about = `
-  <div data='about' id="drag-1" class="draggable">
+  <div data='about' id="drag" class="draggable">
     <div class="window-header"><button id="hide">X</button>About</div>
-    <div class="window-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptatibus, dignissimos ea deleniti eius dolore fuga! Iusto dolore consequuntur dolorum, voluptatem laborum distinctio, maiores placeat et maxime voluptates, laudantium quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi illo illum vitae excepturi ducimus nemo inventore, nobis velit explicabo consequatur alias non! Voluptatem beatae repellendus ab sapiente iste corporis.</div>
+    <div class="window-content">
+    <h2>Hello!</h2>
+    <br>
+    <p>Welcome to the website, check out how cool it is - probably made by someone realllly handsome i bet idk....</p>
+    <br>
+    <p>
+      Yo, we gotta take the power back!//
+      Bam! Here's the plan//
+      Motherfuck Uncle Sam//
+      Step back, I know who I am//
+      Raise up your ear, I'll drop the style and clear//
+      It's the beats and the lyrics they fear//
+      The rage is relentless//
+      We need a movement with a quickness//
+      You are the witness of change//
+      And to counteract//
+      We gotta take the power back
+    </p>
+    <br>
+    <p>The present curriculum//
+      I put my fist in 'em//
+      Eurocentric every last one of 'em//
+      See right through the red, white and blue disguise//
+      With lecture I puncture the structure of lies//
+      Installed in our minds and attempting//
+      To hold us back//
+      We've got to take it back//
+      Holes in our spirit causin' tears and fears//
+      One-sided stories for years and years and years//
+      I'm inferior? Whose inferior?//
+      Yeah, they need to check the interior//
+      Of the system, who gets em about only one culture//
+      And that is why//
+      We gotta take the power back!!!</p></div>
   </div>
-`
+`;
 
-const look = `
-  <div id="drag-2" class="draggable">
-    <div class="window-header"><button id="hide">X</button>Look</div>
-    <div class="window-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptatibus, dignissimos ea deleniti eius dolore fuga! Iusto dolore consequuntur dolorum, voluptatem laborum distinctio, maiores placeat et maxime voluptates, laudantium quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi illo illum vitae excepturi ducimus nemo inventore, nobis velit explicabo consequatur alias non! Voluptatem beatae repellendus ab sapiente iste corporis.</div>
-  </div>
-`
 icons.addEventListener('click', function() {
   desktop.innerHTML = about;
+});
 
+
+//------ close button
+var closeButton =  document.querySelector('#hide');
+
+closeButton.addEventListener('click', function() {
+  console.log('close')
 });
