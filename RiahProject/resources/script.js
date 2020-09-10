@@ -57,25 +57,11 @@ function dragMoveListener(event) {
   target.setAttribute("data-y", y);
 }
 
-// Window POPOP ----------------------------------------------------------------------
+// Window POPOP
 
-const desktop = document.querySelector("#desktop");
-const windowDt = desktop.querySelector("dtwindow");
-const icons = desktop.querySelector(".icons");
-const iconLink = icons.querySelectorAll(".icon");
-
-iconLink.addEventListener("click", clicked);
-
-function clicked(e) {
-  if (e.target.matches("icon")) {
-    const key = e.target;
-    const link = key.dataset.link;
-
-    console.log(e);
-
-    desktop.innerHTML = about;
-  }
-}
+const desktop = document.querySelector("#dtwindow");
+var icons = document.querySelector(".icons");
+var iconLink = icons.querySelector(".icon-about");
 
 var about = `
   <div data='about' id="drag" class="draggable">
@@ -117,30 +103,20 @@ var about = `
   </div>
 `;
 
-var look = `
-<div id="drag" class="">
-<div class="static-window-header">WWW!</div>
-<div class="window-content">
-  <h2>WELCOME TO THE RIAH STUDIO: ONLINE</h3>
-  <br>
-  <p>click them icons over there to see tings</p>
-  <br>
-</div>
-</div>`;
 
-// iconLink.addEventListener("click", function () {
-//   if (!desktop.hasAttribute("about")) {
-//     desktop.innerHTML = about;
-//   }
-// });
+iconLink.addEventListener("click", function () {
+  if (!desktop.hasAttribute("about")) {
+    desktop.innerHTML = about;
+  }
+});
 
-// // ------ close button
+// ------ close button
 
-// var closeButton = document.querySelector("#hide");
+var closeButton = document.querySelector("#hide");
 
-// document.body.addEventListener("click", function (event) {
-//   if (event.srcElement.id == "hide") {
-//     console.log("hideme");
-//     desktop.innerHTML = "";
-//   }
-// });
+document.body.addEventListener("click", function (event) {
+  if (event.srcElement.id == "hide") {
+    console.log("hideme");
+    desktop.innerHTML = "";
+  }
+});
