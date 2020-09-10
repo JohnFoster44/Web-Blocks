@@ -1,7 +1,7 @@
 // Nav Button -------------------------------------------------------------------
-var dropButton = document.querySelector('.dropbtn');
+var dropButton = document.querySelector(".dropbtn");
 
-dropButton.addEventListener('click', function menuButton() {
+dropButton.addEventListener("click", function menuButton() {
   document.getElementById("myDropdown").classList.toggle("show");
 });
 // Close the dropdown menu if the user clicks outside of it
@@ -57,12 +57,27 @@ function dragMoveListener(event) {
   target.setAttribute("data-y", y);
 }
 
-// Window POPOP
+// Window POPOP ----------------------------------------------------------------------
 
-const desktop = document.querySelector('#dtwindow');
-var icons = document.querySelector('.icons');
+const desktop = document.querySelector("#desktop");
+const windowDt = desktop.querySelector("dtwindow");
+const icons = desktop.querySelector(".icons");
+const iconLink = icons.querySelectorAll(".icon");
 
-const about = `
+iconLink.addEventListener("click", clicked);
+
+function clicked(e) {
+  if (e.target.matches("icon")) {
+    const key = e.target;
+    const link = key.dataset.link;
+
+    console.log(e);
+
+    desktop.innerHTML = about;
+  }
+}
+
+var about = `
   <div data='about' id="drag" class="draggable">
     <div class="window-header"><button id="hide">X</button>About</div>
     <div class="window-content">
@@ -102,14 +117,30 @@ const about = `
   </div>
 `;
 
-icons.addEventListener('click', function() {
-  desktop.innerHTML = about;
-});
+var look = `
+<div id="drag" class="">
+<div class="static-window-header">WWW!</div>
+<div class="window-content">
+  <h2>WELCOME TO THE RIAH STUDIO: ONLINE</h3>
+  <br>
+  <p>click them icons over there to see tings</p>
+  <br>
+</div>
+</div>`;
 
+// iconLink.addEventListener("click", function () {
+//   if (!desktop.hasAttribute("about")) {
+//     desktop.innerHTML = about;
+//   }
+// });
 
-//------ close button
-var closeButton =  document.querySelector('#hide');
+// // ------ close button
 
-closeButton.addEventListener('click', function() {
-  console.log('close')
-});
+// var closeButton = document.querySelector("#hide");
+
+// document.body.addEventListener("click", function (event) {
+//   if (event.srcElement.id == "hide") {
+//     console.log("hideme");
+//     desktop.innerHTML = "";
+//   }
+// });
