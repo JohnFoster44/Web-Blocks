@@ -18,7 +18,7 @@ body {
   color: var(--navy);
 }
 
-/* NavBar -------------------*/
+/* NavBar -------------(35px height)------*/
 nav {
   height: 42px;
   display: flex;
@@ -81,7 +81,7 @@ nav {
   text-align: center;
   position: absolute;
   background-color: lavender;
-  border: outset;
+  border: outset lavenderblush;
   min-width: 160px;
   z-index: 1;
 }
@@ -110,6 +110,12 @@ nav {
 }
 
 /* ------------------------------ dragging/ windows ------------------------------------ */
+
+.window-drag{
+  height: 100vh;
+  width: 100vw;
+}
+
 .draggable {
   touch-action: none;
   user-select: none;
@@ -117,13 +123,12 @@ nav {
 }
 
 #drag {
-  background-color: var(--pink);
+  width: 90%;
   margin: 10px;
+  overflow: scroll;
+  background-color: var(--pink);
   border: 2px lavender outset;
   box-shadow: 6px 6px #00000080;
-  /* height: auto; */
-  width: 90%;
-  overflow: scroll;
 
   touch-action: none;
   user-select: none;
@@ -136,9 +141,9 @@ nav {
 }
 
 #hide {
-  background-color: lightgrey;
   margin: 2px;
   padding: 3px 6px;
+  background-color: lightgrey;
 }
 
 #hide:active {
@@ -194,9 +199,13 @@ nav {
 .static{
   position: absolute;
   z-index: 0;
-  margin-top: 60px;
-  /* overflow: auto;
-  width: 95%; */
+  margin-left: 10px;
+  margin-top: 70px;
+  width: 80%;
+  overflow: scroll;
+  background-color: var(--pink);
+  border: 2px lavender outset;
+  box-shadow: 6px 6px #00000080;
 }
 
 #dtwindow{
@@ -230,19 +239,28 @@ nav {
 
 @media (min-width: 768px) {
   #drag{
-    width: 70vw;
+    width: 80vw;
   }
 
   .static{
-    margin-top: 20px;
-
+    margin-top: 0;
+    width: 50%;
   }
+
+
 }
 
 @media (min-width: 992px) {
   #drag{
     width: 70vw;
   }
+
+  .static{
+    margin-top: 0;
+    width: 30%;
+  }
+
+
 }
 
 

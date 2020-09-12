@@ -60,11 +60,12 @@ function dragMoveListener(event) {
 // Window POPOP
 
 const desktop = document.querySelector("#dtwindow");
+
 var icons = document.querySelector(".icons");
+var iconImg = icons.querySelectorAll(".icon");
 var iconLink = icons.querySelector(".icon-about");
 
 var about = `
-  <div data='about' id="drag" class="draggable">
     <div class="window-header"><button id="hide">X</button>About</div>
     <div class="window-content">
     <h2>Hello!</h2>
@@ -100,13 +101,60 @@ var about = `
       Of the system, who gets em about only one culture//
       And that is why//
       We gotta take the power back!!!</p></div>
-  </div>
+`;
+var look = `
+    <div class="window-header"><button id="hide">X</button>About</div>
+    <div class="window-content">
+    <h2>yehhhhh</h2>
+    <br>
+    <p>Welcome to the website, check out how cool it is - probably made by someone realllly handsome i bet idk....</p>
+    <br>
+    <p>
+      Yo, we gotta take the power back!//
+      Bam! Here's the plan//
+      Motherfuck Uncle Sam//
+      Step back, I know who I am//
+      Raise up your ear, I'll drop the style and clear//
+      It's the beats and the lyrics they fear//
+      The rage is relentless//
+      We need a movement with a quickness//
+      You are the witness of change//
+      And to counteract//
+      We gotta take the power back
+    </p>
+    <br>
+    <p>The present curriculum//
+      I put my fist in 'em//
+      Eurocentric every last one of 'em//
+      See right through the red, white and blue disguise//
+      With lecture I puncture the structure of lies//
+      Installed in our minds and attempting//
+      To hold us back//
+      We've got to take it back//
+      Holes in our spirit causin' tears and fears//
+      One-sided stories for years and years and years//
+      I'm inferior? Whose inferior?//
+      Yeah, they need to check the interior//
+      Of the system, who gets em about only one culture//
+      And that is why//
+      We gotta take the power back!!!</p></div>
 `;
 
+var div = document.createElement("div");
+div.className = "draggable";
+div.id = 'drag';
 
 iconLink.addEventListener("click", function () {
+  console.log("john");
+
   if (!desktop.hasAttribute("about")) {
-    desktop.innerHTML = about;
+    desktop.appendChild(div);
+    div.innerHTML = about;
+  }
+  
+  if (!desktop.hasAttribute("look")) {
+    desktop.appendChild(div);
+    div.innerHTML = about;
   }
 });
 
