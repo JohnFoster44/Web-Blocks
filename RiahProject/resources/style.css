@@ -4,11 +4,17 @@
   overflow-x: hidden;
 }
 
+@font-face{
+  font-family: W95FA;
+  src: url('/RiahProject/resources/W95FA/w95fa.woff');
+}
+
 :root {
   --blue: #c8f7ff;
   --navy: #001152;
   --pink: #ff8ad7;
   --yellow: #fff029;
+  --orange: #ea935a;
 }
 
 body {
@@ -16,6 +22,7 @@ body {
   background-color: var(--blue);
   height: 100vh;
   color: var(--navy);
+  font-family: W95FA;
 }
 
 /* NavBar -------------(35px height)------*/
@@ -25,7 +32,8 @@ nav {
   padding: 2px 2px 3px 2px;
   justify-content: space-between;
   background: var(--pink);
-  border-bottom: outset var(--pink) 2px;
+  border-bottom: outset var(--orange) 2px;
+  font-family: W95FA;
 }
 
 .socials {
@@ -37,8 +45,13 @@ nav {
   width: 100px;
 }
 
+.socials a {
+  overflow-y: hidden;
+}
+
 .socials i {
   padding: 3px;
+  
 }
 .socials i:hover {
   color: #c8f7ff;
@@ -54,9 +67,10 @@ nav {
   color: black;
   height: 42px;
   padding: 0 34px;
-  font-size: 16px;
+  font-size: 1.9rem;
   border: outset 2px;
   cursor: pointer;
+  font-family: W95FA;
 }
 
 /* Dropdown button on hover & focus */
@@ -65,6 +79,7 @@ nav {
   background-color: gray;
   border: inset;
 }
+
 .active {
   background-color: gray;
   border: inset;
@@ -84,6 +99,7 @@ nav {
   border: outset lavenderblush;
   min-width: 160px;
   z-index: 1;
+  font-family: W95FA;
 }
 
 /* Links inside the dropdown */
@@ -144,6 +160,7 @@ nav {
   margin: 2px;
   padding: 3px 6px;
   background-color: lightgrey;
+  font-family: W95FA;
 }
 
 #hide:active {
@@ -230,7 +247,7 @@ nav {
 }
 
 .icons img {
-  border: dotted blue 0.5px;
+  /* border: dotted blue 0.5px; */
   height: auto;
   width: 40px;
   padding: 8px;
@@ -262,6 +279,10 @@ nav {
 
 
 }
+
+
+/* SCANLINE --------------------------------------------- */
+
 
 
 /* POTENTIAL ADDS */
