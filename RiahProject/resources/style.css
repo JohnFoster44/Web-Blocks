@@ -25,9 +25,9 @@ body {
   font-family: W95FA;
 }
 
-/* NavBar -------------(35px height)------*/
+/* NavBar -------------------*/
 nav {
-  height: 42px;
+  height: 35px;
   display: flex;
   padding: 2px 2px 3px 2px;
   justify-content: space-between;
@@ -39,13 +39,12 @@ nav {
 .socials {
   display: flex;
   justify-content: space-around;
-  border: ridge lightpink 2px;
-  background-color: lavenderblush;
+  border: ridge var(--yellow) 2px;
   color: var(--navy);
   width: 100px;
 }
 
-.socials a {
+/* .socials a {
   overflow-y: hidden;
 }
 
@@ -59,21 +58,21 @@ nav {
   cursor: -webkit-pointer;
   cursor: -moz-pointer;
   cursor: pointer;
-}
+} */
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: lavender;
+  background-color: var(--blue);
   color: black;
-  height: 42px;
+  height: 35px;
   padding: 0 34px;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   border: outset 2px;
   cursor: pointer;
   font-family: W95FA;
 }
 
-/* Dropdown button on hover & focus */
+/* Dropdown button */
 
 .dropbtn:active {
   background-color: gray;
@@ -93,11 +92,11 @@ nav {
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
-  text-align: center;
+  text-align: left;
   position: absolute;
-  background-color: lavender;
-  border: outset lavenderblush;
-  min-width: 160px;
+  background-color: var(--blue);
+  border: outset var(--blue);
+  min-width: 260px;
   z-index: 1;
   font-family: W95FA;
 }
@@ -105,14 +104,14 @@ nav {
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 20px 16px;
   text-decoration: none;
   border: solid 0.5px #00000009;
   display: block;
 }
 
 .dropdown-content img {
-  padding: 0 20px 0 0;
+  padding: 0 80px 0 0;
 }
 
 /* Change color of dropdown links on hover */
@@ -127,29 +126,27 @@ nav {
 
 /* ------------------------------ dragging/ windows ------------------------------------ */
 
-.window-drag{
+/* .window-drag{
   height: 100vh;
   width: 100vw;
-}
+} */
 
 .draggable {
+  max-width: 70%;
   touch-action: none;
   user-select: none;
-  /* z-index: 0; */
-}
-
-#drag {
-  width: 90%;
-  margin: 10px;
   overflow: scroll;
   background-color: var(--pink);
   border: 2px lavender outset;
   box-shadow: 6px 6px #00000080;
-
-  touch-action: none;
-  user-select: none;
+  position: absolute;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
+}
+
+#drag {
+  touch-action: none;
+  user-select: none;
 }
 
 .hidden {
@@ -178,13 +175,6 @@ nav {
   cursor: grab;
 }
 
-.static-window-header {
-  background-color: var(--blue);
-  margin: 4px;
-  height: 28px;
-  font-size: 1.1rem;
-}
-
 .window-header:active {
   cursor: -webkit-grabbing;
   cursor: -moz-grabbing;
@@ -197,6 +187,14 @@ nav {
   margin: 5px;
   padding: 10px;
   height: 80%;
+}
+
+.advert{
+  height: 100px;
+  width: 100px;
+  background-color: var(--pink);
+  border: 2px lavender outset;
+  box-shadow: 6px 6px #00000080;
 }
 
 /* -----------------------------DESKTOP--------------------------------- */
@@ -227,8 +225,9 @@ nav {
 
 #dtwindow{
   position: absolute;
+  padding-top: 1px;
   z-index: 2;
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
 }
 
@@ -241,13 +240,11 @@ nav {
 
 .icons {
   display: flex;
-  /* border: blueviolet solid; */
   overflow-y: hidden;
   justify-content: end;
 }
 
 .icons img {
-  /* border: dotted blue 0.5px; */
   height: auto;
   width: 40px;
   padding: 8px;
@@ -255,28 +252,16 @@ nav {
 }
 
 @media (min-width: 768px) {
-  #drag{
+  /* .draggable{
     width: 80vw;
-  }
-
-  .static{
-    margin-top: 0;
-    width: 50%;
-  }
-
+  } */
 
 }
 
 @media (min-width: 992px) {
-  #drag{
+  /* .draggable{
     width: 70vw;
-  }
-
-  .static{
-    margin-top: 0;
-    width: 30%;
-  }
-
+  } */
 
 }
 

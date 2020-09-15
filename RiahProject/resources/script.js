@@ -22,7 +22,6 @@ window.onclick = function (e) {
 const position = { x: 0, y: 0 };
 
 interact(".draggable")
-  .allowFrom(".window-header")
   .draggable({
     // enable inertial throwing
     inertia: true,
@@ -40,6 +39,8 @@ interact(".draggable")
       // call this function on every dragmove event
       move: dragMoveListener,
     },
+
+    allowFrom:('.window-header')
   });
 
 function dragMoveListener(event) {
@@ -58,13 +59,17 @@ function dragMoveListener(event) {
 }
 
 // Window POPOP
-
 const desktop = document.querySelector("#dtwindow");
 
+var randomPos = (min, max) => Math.floor(Math.random() * (min, max + 1) + min);
+var wWidth = window.innerWidth / 2;
+var wHeight = window.innerHeight / 2;
+
+// var dWidth =
 var icons = document.querySelector(".icons");
-var iconImg = icons.querySelectorAll(".icon");
 var iconLink = icons.querySelector(".icon-about");
 
+// innerHTML window content
 var about = `
     <div class="window-header"><button id="hide">X</button>About</div>
     <div class="window-content">
@@ -140,31 +145,49 @@ var look = `
       We gotta take the power back!!!</p></div>
 `;
 
-var div = document.createElement("div");
-div.className = "draggable";
-div.id = 'drag';
+// random pozish
+var windowDiv = document.createElement("div");
+windowDiv.className = "draggable";
 
 iconLink.addEventListener("click", function () {
-  console.log("john");
-
-  if (!desktop.hasAttribute("about")) {
-    desktop.appendChild(div);
-    div.innerHTML = about;
-  }
-  
-  if (!desktop.hasAttribute("look")) {
-    desktop.appendChild(div);
-    div.innerHTML = about;
-  }
+  desktop.appendChild(windowDiv);
+  windowDiv.innerHTML = about;
+  windowDiv.style.top = randomPos(0, wHeight / 2) + "px";
+  windowDiv.style.left = randomPos(0, wWidth / 2) + "px";
 });
 
-// ------ close button
+// Advert Spawn
 
+var advertCont = `<div>
+<div class="window-header">WWW!</div>
+<div class="window-content">
+  <h2>ADVERT! ADVERT! ADVERT! ADVERT!</h3>
+  <br>
+  <p>buy buy buy buy </p>
+  <br>
+  <p>don't want to be a fool for you just another player in your game for two</p>
+</div>
+</div>`;
+
+var ad = document.createElement('div');
+ad.className = 'draggable';
+
+window.onload = function(){
+  setTimeout(adLoad, 1000);
+};
+
+function adLoad(){
+  desktop.appendChild(ad);
+  ad.innerHTML = advertCont;
+  ad.style.top = randomPos(0, wHeight / 2) + "px";
+  ad.style.left = randomPos(0, wWidth / 2) + "px";
+};
+
+// ------ close button
 var closeButton = document.querySelector("#hide");
 
 document.body.addEventListener("click", function (event) {
-  if (event.srcElement.id == "hide") {
-    console.log("hideme");
-    desktop.innerHTML = "";
+  if (event.target.id == "hide") {
+    desktop.removeChild(windowDiv);
   }
 });
