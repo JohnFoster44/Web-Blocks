@@ -44,22 +44,6 @@ nav {
   width: 100px;
 }
 
-/* .socials a {
-  overflow-y: hidden;
-}
-
-.socials i {
-  padding: 3px;
-  
-}
-.socials i:hover {
-  color: #c8f7ff;
-  transition: 0.1s;
-  cursor: -webkit-pointer;
-  cursor: -moz-pointer;
-  cursor: pointer;
-} */
-
 /* Dropdown Button */
 .dropbtn {
   background-color: var(--blue);
@@ -71,8 +55,6 @@ nav {
   cursor: pointer;
   font-family: W95FA;
 }
-
-/* Dropdown button */
 
 .dropbtn:active {
   background-color: gray;
@@ -125,12 +107,6 @@ nav {
 }
 
 /* ------------------------------ dragging/ windows ------------------------------------ */
-
-/* .window-drag{
-  height: 100vh;
-  width: 100vw;
-} */
-
 .draggable {
   max-width: 70%;
   touch-action: none;
@@ -182,11 +158,25 @@ nav {
 }
 
 .window-content {
+  display: flex;
+  flex-direction: column;
   border: inset lavender;
   background: lavenderblush;
   margin: 5px;
   padding: 10px;
   height: 80%;
+}
+
+.image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img{
+  height: auto;
+  width: 20%;
+  padding: 20px;
 }
 
 .advert{
@@ -252,23 +242,15 @@ nav {
 }
 
 @media (min-width: 768px) {
-  /* .draggable{
-    width: 80vw;
-  } */
-
+ /*  */
 }
 
 @media (min-width: 992px) {
-  /* .draggable{
-    width: 70vw;
-  } */
-
+/*  */
 }
 
 
 /* SCANLINE --------------------------------------------- */
-
-
 
 /* POTENTIAL ADDS */
 /* CRT FLICKER */
