@@ -59,8 +59,8 @@ function dragMoveListener(event) {
 
 // Window POPOP --------------------------------------------------------------------
 var randomPos = (min, max) => Math.floor(Math.random() * (min, max + 1) + min);
-var wWidth = window.innerWidth / 2;
-var wHeight = window.innerHeight / 2;
+var wWidth = window.innerWidth;
+var wHeight = window.innerHeight /2;
 
 const desktop = document.querySelector("#dtwindow");
 
@@ -187,6 +187,18 @@ document.querySelectorAll(".icon").forEach((item) => {
   });
 });
 
+function windowOnLoad() {
+  desktop.appendChild(windowDivLook);
+  windowDivLook.innerHTML = look;
+  windowDivLook.style.top = randomPos(0, wHeight / 2) + "px";
+  windowDivLook.style.left = randomPos(0, wWidth / 2) + "px";
+
+  desktop.appendChild(windowDivAbout);
+  windowDivAbout.innerHTML = about;
+  windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
+  windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
+}
+
 // Advert Spawn
 var advertCont = `<div>
 <div class="window-header">WWW!</div>
@@ -202,32 +214,48 @@ var advertCont = `<div>
 var ad = document.createElement("div");
 ad.className = "draggable";
 
-var clonedAd = ad.cloneNode(true)
-clonedAd.className = 'draggable'
-
+var clonedAd = ad.cloneNode(true);
+clonedAd.className = "draggable";
+// spawn on load --------------------------------------------
 window.onload = function () {
   setTimeout(adLoad, 1000);
+  // setTimeout(windowOnLoad, 2000)
 };
 
-function adLoad() {
-  desktop.appendChild(ad);
-  desktop.appendChild(clonedAd)
-
-  ad.innerHTML = advertCont;
-  ad.style.top = randomPos(0, wHeight) + "px";
-  ad.style.left = randomPos(0, wWidth) + "px";
-
-  clonedAd.innerHTML = advertCont;
-  clonedAd.style.top = randomPos(0, wHeight / 2) + "px";
-  clonedAd.style.left = randomPos(0, wWidth / 2) + "px";
+// every second
+for (var i = 0; i < 10; i++) {
+  let parent = document.createElement("div");
+  parent.className = "draggable";
+  parent.innerHTML = advertCont;
+  parent.style.top = randomPos(0, wHeight / 0.8) + "px";
+  parent.style.left = randomPos(0, wWidth/ 1.4) + "px";
+  console.log(parent.style.top)
+  setTimeout(function () {
+    desktop.append(parent);
+  }, 1000 * i);
 }
 
-// ------ close button
+// function adLoad() {
+//   desktop.appendChild(ad);
+//   ad.innerHTML = advertCont;
+//   ad.style.top = randomPos(0, wHeight) + "px";
+//   ad.style.left = randomPos(0, wWidth) + "px";
+// }
+
+// ------ close button -(GET WORKING)---------------------------------------
 var closeButton = document.querySelector("#hide");
 
 document.body.addEventListener("click", function (event) {
-  console.log(event)
+  console.log(event);
   if (event.target.id == "hide") {
     desktop.removeChild(event.target);
   }
 });
+
+// CLOCK ------------------------------------------------------
+var clk = document.querySelector(".clock");
+function clock() {
+  var digital = new Date().toLocaleTimeString();
+  clk.innerHTML = digital;
+}
+setInterval(clock, 1000);
