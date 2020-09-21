@@ -70,12 +70,18 @@ windowDivAbout.className = "draggable";
 var windowDivLook = document.createElement("div");
 windowDivLook.className = "draggable";
 
-var windowDivLook = document.createElement("div");
-windowDivLook.className = "draggable";
+var windowDivPrice = document.createElement("div");
+windowDivPrice.className = "draggable";
+
+var windowDivCommunity = document.createElement("div");
+windowDivCommunity.className = "draggable";
+
+var windowDivProject = document.createElement("div");
+windowDivProject.className = "draggable";
 
 // innerHTML window content
 var about = `
-    <div class="window-header"><button id="hide">X</button>About</div>
+    <div id="about" class="window-header"><button id="hide">X</button>About</div>
     <div class="window-content">
     <h2>Hello!</h2>
     <br>
@@ -153,7 +159,50 @@ var look = `
   We gotta take the power back!!!</p>
 </div>
 `;
-
+var price = `
+<div class="window-header"><button id="hide">X</button>Price</div>
+<div class="window-content">
+<h2>Price</h2>
+<br>
+<p>Welcome to the website, check out how cool it is - probably made by someone realllly handsome i bet idk....</p>
+<br>
+<p>
+  Yo, we gotta take the power back!//
+  Bam! Here's the plan//
+  Motherfuck Uncle Sam//
+  Step back, I know who I am//
+  Raise up your ear, I'll drop the style and clear//
+  It's the beats and the lyrics they fear//
+  The rage is relentless//
+  We need a movement with a quickness//
+  You are the witness of change//
+  And to counteract//
+  We gotta take the power back
+</p>
+<br>
+<div class="image" >
+  <img src="/RiahProject/resources/pexels-photo-3966569.jpeg" alt="">
+</div>
+<br>
+<p>The present curriculum//
+  I put my fist in 'em//
+  Eurocentric every last one of 'em//
+  See right through the red, white and blue disguise//
+  With lecture I puncture the structure of lies//
+  Installed in our minds and attempting//
+  To hold us back//
+  We've got to take it back//
+  Holes in our spirit causin' tears and fears//
+  One-sided stories for years and years and years//
+  I'm inferior? Whose inferior?//
+  Yeah, they need to check the interior//
+  Of the system, who gets em about only one culture//
+  And that is why//
+  We gotta take the power back!!!</p>
+</div>
+`;
+var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`
+var project = ``
 // Icons Clicked
 document.querySelectorAll(".icon").forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -174,10 +223,18 @@ document.querySelectorAll(".icon").forEach((item) => {
     }
 
     if (e.target.dataset.link === "price") {
+      desktop.appendChild(windowDivPrice);
+      windowDivPrice.innerHTML = price;
+      windowDivPrice.style.top = randomPos(0, wHeight / 2) + "px";
+      windowDivPrice.style.left = randomPos(0, wWidth / 2) + "px";
       console.log("u crazy son of a birtch");
     }
 
     if (e.target.dataset.link === "community") {
+      desktop.appendChild(windowDivCommunity);
+      windowDivCommunity.innerHTML = community;
+      windowDivCommunity.style.top = randomPos(0, wHeight / 2) + "px";
+      windowDivCommunity.style.left = randomPos(0, wWidth / 2) + "px";
       console.log("u crazy son of a birtch");
     }
 
@@ -187,21 +244,21 @@ document.querySelectorAll(".icon").forEach((item) => {
   });
 });
 
-function windowOnLoad() {
-  desktop.appendChild(windowDivLook);
-  windowDivLook.innerHTML = look;
-  windowDivLook.style.top = randomPos(0, wHeight / 2) + "px";
-  windowDivLook.style.left = randomPos(0, wWidth / 2) + "px";
+// function windowOnLoad() {
+//   desktop.appendChild(windowDivLook);
+//   windowDivLook.innerHTML = look;
+//   windowDivLook.style.top = randomPos(0, wHeight / 2) + "px";
+//   windowDivLook.style.left = randomPos(0, wWidth / 2) + "px";
 
-  desktop.appendChild(windowDivAbout);
-  windowDivAbout.innerHTML = about;
-  windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
-  windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
-}
+//   desktop.appendChild(windowDivAbout);
+//   windowDivAbout.innerHTML = about;
+//   windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
+//   windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
+// }
 
 // Advert Spawn
 var advertCont = `<div>
-<div class="window-header">WWW!</div>
+<div class="window-header"><button id="hide"> RHS</button></div>
 <div class="window-content">
   <h2>ADVERT! ADVERT! ADVERT! ADVERT!</h3>
   <br>
@@ -210,45 +267,27 @@ var advertCont = `<div>
   <p>don't want to be a fool for you just another player in your game for two</p>
 </div>
 </div>`;
-
-var ad = document.createElement("div");
-ad.className = "draggable";
-
-var clonedAd = ad.cloneNode(true);
-clonedAd.className = "draggable";
-// spawn on load --------------------------------------------
-window.onload = function () {
-  setTimeout(adLoad, 1000);
-  // setTimeout(windowOnLoad, 2000)
-};
-
 // every second
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 5; i++) {
   let parent = document.createElement("div");
   parent.className = "draggable";
   parent.innerHTML = advertCont;
   parent.style.top = randomPos(0, wHeight / 0.8) + "px";
   parent.style.left = randomPos(0, wWidth/ 1.4) + "px";
-  console.log(parent.style.top)
   setTimeout(function () {
     desktop.append(parent);
   }, 1000 * i);
 }
 
-// function adLoad() {
-//   desktop.appendChild(ad);
-//   ad.innerHTML = advertCont;
-//   ad.style.top = randomPos(0, wHeight) + "px";
-//   ad.style.left = randomPos(0, wWidth) + "px";
-// }
+var ad = document.createElement("div");
+ad.className = "draggable";
 
 // ------ close button -(GET WORKING)---------------------------------------
 var closeButton = document.querySelector("#hide");
 
-document.body.addEventListener("click", function (event) {
-  console.log(event);
-  if (event.target.id == "hide") {
-    desktop.removeChild(event.target);
+document.body.addEventListener("click", function (e) {
+  if (e.target.id == "hide") {
+    desktop.removeChild(e.originalTarget.offsetParent)
   }
 });
 
