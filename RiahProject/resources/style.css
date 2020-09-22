@@ -99,7 +99,7 @@ nav {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: lavenderblush;
+  background-color: var(--pink);
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
@@ -190,34 +190,24 @@ nav {
 
 /* -----------------------------DESKTOP--------------------------------- */
 #desktop {
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
 
   flex-direction: column;
   justify-content: space-evenly;
 
-  background-image: url(/RiahProject/riah_logo.png);
+  background-image: url(/RiahProject/resources/background/riah_logo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
-}
 
-.static{
-  position: absolute;
-  z-index: 0;
-  margin-left: 10px;
-  margin-top: 70px;
-  width: 80%;
-  overflow: scroll;
-  background-color: var(--pink);
-  border: 2px lavender outset;
-  box-shadow: 6px 6px #00000080;
+  overflow-y: hidden;
 }
 
 #dtwindow{
   position: absolute;
   padding-top: 1px;
-  z-index: 2;
+  z-index: 0;
   height: 85vh;
   width: 100vw;
 }
@@ -246,8 +236,10 @@ nav {
  /*  */
 }
 
-@media (min-width: 992px) {
-/*  */
+@media (max-width: 414px) {
+.draggable{
+  max-width: 100%;
+}
 }
 
 

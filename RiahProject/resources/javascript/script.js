@@ -139,7 +139,7 @@ var look = `
 </p>
 <br>
 <div class="image" >
-  <img src="/RiahProject/resources/pexels-photo-3966569.jpeg" alt="">
+  <img src="/RiahProject/resources/images/pexels-photo-3966569.jpeg" alt="">
 </div>
 <br>
 <p>The present curriculum//
@@ -203,6 +203,7 @@ var price = `
 `;
 var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`
 var project = ``
+
 // Icons Clicked
 document.querySelectorAll(".icon").forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -211,30 +212,38 @@ document.querySelectorAll(".icon").forEach((item) => {
     if (e.target.dataset.link === "about") {
       desktop.appendChild(windowDivAbout);
       windowDivAbout.innerHTML = about;
-      windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
-      windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
+      if(window.innerWidth > 768){
+        windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
+        windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
+      }
     }
 
     if (e.target.dataset.link === "look") {
       desktop.appendChild(windowDivLook);
       windowDivLook.innerHTML = look;
-      windowDivLook.style.top = randomPos(0, wHeight / 2) + "px";
-      windowDivLook.style.left = randomPos(0, wWidth / 2) + "px";
+      if(window.innerWidth > 768){
+        windowDivLook.style.top = randomPos(0, wHeight / 2) + "px";
+        windowDivLook.style.left = randomPos(0, wWidth / 2) + "px";
+      }
     }
 
     if (e.target.dataset.link === "price") {
       desktop.appendChild(windowDivPrice);
       windowDivPrice.innerHTML = price;
-      windowDivPrice.style.top = randomPos(0, wHeight / 2) + "px";
-      windowDivPrice.style.left = randomPos(0, wWidth / 2) + "px";
+      if(window.innerWidth > 768){
+        windowDivPrice.style.top = randomPos(0, wHeight / 2) + "px";
+        windowDivPrice.style.left = randomPos(0, wWidth / 2) + "px";
+      }
       console.log("u crazy son of a birtch");
     }
 
     if (e.target.dataset.link === "community") {
       desktop.appendChild(windowDivCommunity);
       windowDivCommunity.innerHTML = community;
-      windowDivCommunity.style.top = randomPos(0, wHeight / 2) + "px";
-      windowDivCommunity.style.left = randomPos(0, wWidth / 2) + "px";
+      if(window.innerWidth > 768){
+        windowDivCommunity.style.top = randomPos(0, wHeight / 2) + "px";
+        windowDivCommunity.style.left = randomPos(0, wWidth / 2) + "px";
+      }
       console.log("u crazy son of a birtch");
     }
 
