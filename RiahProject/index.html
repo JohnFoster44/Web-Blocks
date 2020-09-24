@@ -10,13 +10,19 @@
     ></script>
     <!-- css -->
     <link
-      rel="stylesheet"
-      href="/RiahProject/resources/style.css"
+    rel="stylesheet"
+    href="/RiahProject/resources/css/amp.css"
     />
+    <link
+      rel="stylesheet"
+      href="/RiahProject/resources/css/style.css"
+    />
+    <!-- interact -->
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-
+    <!-- radio -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.2.0/dist/amplitude.js"></script>
     <!-- ---------------- -->
-    <title>Riah_TEST</title>
+    <title>The Riah Hair Studio | Welcome!</title>
   </head>
   <!-- Thanks for checking out the site - hit john up if you want to hire him! @:www.johnfoster44.com -->
   <body>
@@ -56,9 +62,63 @@
 <!-- this here is the dynamic part xo -->
       <div id="dtwindow">
 
+
+        <div class="draggable">
+
+          <div>
+            <div class="window-header"><button id="hide"> RHS</button>RIAH RADIO</div>
+          <div class="window-content">
+
+            <div class="player">
+
+              <img src="/RiahProject/resources/amp/cover/hyperlife2.jpg" class="album-art"/>
+
+              <div class="meta-container">
+
+                <div class="song-title">SadBoogie</div>
+                <div class="song-artist">hyperlife</div>
+        
+                <div class="time-container">
+
+                  <div class="current-time">
+                    <span class="amplitude-current-minutes" data-amplitude-song-index="0"></span>:<span class="amplitude-current-seconds" data-amplitude-song-index="0"></span>
+                  </div>
+        
+                  <div class="duration">
+                    <span class="amplitude-duration-minutes" data-amplitude-song-index="0"></span>:<span class="amplitude-duration-seconds" data-amplitude-song-index="0"></span>
+                  </div>
+
+                </div>
+
+                <progress class="amplitude-song-played-progress" data-amplitude-song-index="0" id="song-played-progress-1"></progress>
+                <div class="control-container">
+  
+                  <div class="amplitude-prev"></div>
+                  <div class="amplitude-play-pause" data-amplitude-song-index="0"></div>
+                  <div class="amplitude-next"></div>
+  
+                </div>
+
+              </div>
+
+            </div>
+            
+            <div id="preload">
+              <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/previous.svg"/>
+              <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/play.svg"/>
+              <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/pause.svg"/>
+              <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/next.svg"/>
+            </div>
+
+          </div>
+        </div>
+
       </div>
+
+
     </div>
     <!-- js -->
     <script src="/RiahProject/resources/javascript/script.js"></script>
+    <script src="/RiahProject/resources/javascript/amp.js"></script>
   </body>
 </html>

@@ -139,7 +139,7 @@ var look = `
 </p>
 <br>
 <div class="image" >
-  <img src="/RiahProject/resources/images/pexels-photo-3966569.jpeg" alt="">
+  <img src="/RiahProject/resources/img/pexels-photo-3966569.jpeg" alt="">
 </div>
 <br>
 <p>The present curriculum//
@@ -166,39 +166,38 @@ var price = `
 <br>
 <p>Welcome to the website, check out how cool it is - probably made by someone realllly handsome i bet idk....</p>
 <br>
+<br>
 <p>
-  Yo, we gotta take the power back!//
-  Bam! Here's the plan//
-  Motherfuck Uncle Sam//
-  Step back, I know who I am//
-  Raise up your ear, I'll drop the style and clear//
-  It's the beats and the lyrics they fear//
-  The rage is relentless//
-  We need a movement with a quickness//
-  You are the witness of change//
-  And to counteract//
-  We gotta take the power back
+B-I-G P-O-P-P-A, no info for the DEA
+Federal agents mad 'cause I'm flagrant
+Tap my cell and the phone in the basement
+My team supreme, stay clean
+Triple beam lyrical dream, I be that
+Cat you see at all events bent
+Gats in holsters, girls on shoulders
+Playboy, I told ya, mere mics to me
+Bruise too much, I lose too much
+Step on stage, the girls boo too much
+I guess it's 'cause you run with lame dudes too much
+Me lose my touch? Never that!
+If I did, ain't no problem to get the gat
+Where the true players at? Throw your Rollies in the sky
+Wave 'em side to side and keep your hands high
+While I give your girl the eye, player please
+Lyrically, see B.I.G be flossing
+Jig on the cover of Fortune, 5 double O
+Here's my phone number, your man ain't got to know
+I got the dough, got the flow down pizat
+Platinum plus like thizat
+Dangerous on trizacks leave your ass flizat
+I don't know what they want from me
+It's like the more money we come across
+The more problems we see
 </p>
 <br>
 <div class="image" >
-  <img src="/RiahProject/resources/pexels-photo-3966569.jpeg" alt="">
+  <img src="/RiahProject/resources/img/pexels-photo-3966569.jpeg" alt="">
 </div>
-<br>
-<p>The present curriculum//
-  I put my fist in 'em//
-  Eurocentric every last one of 'em//
-  See right through the red, white and blue disguise//
-  With lecture I puncture the structure of lies//
-  Installed in our minds and attempting//
-  To hold us back//
-  We've got to take it back//
-  Holes in our spirit causin' tears and fears//
-  One-sided stories for years and years and years//
-  I'm inferior? Whose inferior?//
-  Yeah, they need to check the interior//
-  Of the system, who gets em about only one culture//
-  And that is why//
-  We gotta take the power back!!!</p>
 </div>
 `;
 var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`
@@ -277,19 +276,20 @@ var advertCont = `<div>
 </div>
 </div>`;
 // every second
-for (var i = 0; i < 5; i++) {
-  let parent = document.createElement("div");
-  parent.className = "draggable";
-  parent.innerHTML = advertCont;
-  parent.style.top = randomPos(0, wHeight / 0.8) + "px";
-  parent.style.left = randomPos(0, wWidth/ 1.4) + "px";
-  setTimeout(function () {
-    desktop.append(parent);
-  }, 1000 * i);
-}
 
-var ad = document.createElement("div");
-ad.className = "draggable";
+// for (var i = 0; i < 5; i++) {
+//   let parent = document.createElement("div");
+//   parent.className = "draggable";
+//   parent.innerHTML = advertCont;
+//   parent.style.top = randomPos(0, wHeight / 0.8) + "px";
+//   parent.style.left = randomPos(0, wWidth/ 1.4) + "px";
+//   setTimeout(function () {
+//     desktop.append(parent);
+//   }, 1000 * i);
+// }
+
+// var ad = document.createElement("div");
+// ad.className = "draggable";
 
 // ------ close button -(GET WORKING)---------------------------------------
 var closeButton = document.querySelector("#hide");
@@ -307,3 +307,5 @@ function clock() {
   clk.innerHTML = digital;
 }
 setInterval(clock, 1000);
+
+// 
