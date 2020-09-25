@@ -60,7 +60,7 @@ function dragMoveListener(event) {
 // Window POPOP --------------------------------------------------------------------
 var randomPos = (min, max) => Math.floor(Math.random() * (min, max + 1) + min);
 var wWidth = window.innerWidth;
-var wHeight = window.innerHeight /2;
+var wHeight = window.innerHeight / 2;
 
 const desktop = document.querySelector("#dtwindow");
 
@@ -200,8 +200,8 @@ The more problems we see
 </div>
 </div>
 `;
-var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`
-var project = ``
+var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`;
+var project = ``;
 
 // Icons Clicked
 document.querySelectorAll(".icon").forEach((item) => {
@@ -211,7 +211,7 @@ document.querySelectorAll(".icon").forEach((item) => {
     if (e.target.dataset.link === "about") {
       desktop.appendChild(windowDivAbout);
       windowDivAbout.innerHTML = about;
-      if(window.innerWidth > 768){
+      if (window.innerWidth > 768) {
         windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
         windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
       }
@@ -220,7 +220,7 @@ document.querySelectorAll(".icon").forEach((item) => {
     if (e.target.dataset.link === "look") {
       desktop.appendChild(windowDivLook);
       windowDivLook.innerHTML = look;
-      if(window.innerWidth > 768){
+      if (window.innerWidth > 768) {
         windowDivLook.style.top = randomPos(0, wHeight / 2) + "px";
         windowDivLook.style.left = randomPos(0, wWidth / 2) + "px";
       }
@@ -229,7 +229,7 @@ document.querySelectorAll(".icon").forEach((item) => {
     if (e.target.dataset.link === "price") {
       desktop.appendChild(windowDivPrice);
       windowDivPrice.innerHTML = price;
-      if(window.innerWidth > 768){
+      if (window.innerWidth > 768) {
         windowDivPrice.style.top = randomPos(0, wHeight / 2) + "px";
         windowDivPrice.style.left = randomPos(0, wWidth / 2) + "px";
       }
@@ -239,7 +239,7 @@ document.querySelectorAll(".icon").forEach((item) => {
     if (e.target.dataset.link === "community") {
       desktop.appendChild(windowDivCommunity);
       windowDivCommunity.innerHTML = community;
-      if(window.innerWidth > 768){
+      if (window.innerWidth > 768) {
         windowDivCommunity.style.top = randomPos(0, wHeight / 2) + "px";
         windowDivCommunity.style.left = randomPos(0, wWidth / 2) + "px";
       }
@@ -296,7 +296,8 @@ var closeButton = document.querySelector("#hide");
 
 document.body.addEventListener("click", function (e) {
   if (e.target.id == "hide") {
-    desktop.removeChild(e.originalTarget.offsetParent)
+    console.log(e.target.offsetParent)
+    desktop.removeChild(e.target.offsetParent);
   }
 });
 
@@ -308,4 +309,4 @@ function clock() {
 }
 setInterval(clock, 1000);
 
-// 
+//

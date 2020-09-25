@@ -1,115 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- font awesome -->
-    <script
-      src="https://kit.fontawesome.com/645e55755d.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- css -->
-    <link
-    rel="stylesheet"
-    href="/RiahProject/resources/css/amp.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/RiahProject/resources/css/style.css"
-    />
-    <!-- interact -->
-    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-    <!-- radio -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.2.0/dist/amplitude.js"></script>
-    <!-- ---------------- -->
-    <title>The Riah Hair Studio | Welcome!</title>
-  </head>
-  <!-- Thanks for checking out the site - hit john up if you want to hire him! @:www.johnfoster44.com -->
-  <body>
-    <nav>
-      <div class="dropdown">
-        <button class="dropbtn">Menu</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#"><img src="/RiahProject/resources/icons/glob.png">Link 1</a>
-          <a href="#"><img src="/RiahProject/resources/icons/glob.png">Link 1</a>
-          <a href="#"><img src="/RiahProject/resources/icons/glob.png">Link 1</a>
-          <a href="#"><img src="/RiahProject/resources/icons/glob.png">Link 1</a>
-          <a href="#"><img src="/RiahProject/resources/icons/glob.png">Link 1</a>
-          <p>//JOHNFOSTER44//</p>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/645e55755d.js" crossorigin="anonymous"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="/RiahProject/resources/css/amp.css" />
+  <link rel="stylesheet" href="/RiahProject/resources/css/style.css" />
+  <!-- interact -->
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  <!-- radio -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.2.0/dist/amplitude.js"></script>
+  <!-- ---------------- -->
+  <title>The Riah Hair Studio | Welcome!</title>
+</head>
+<!-- Thanks for checking out the site - hit john up if you want to hire him! @:www.johnfoster44.com -->
+
+<body>
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#"><img src="/RiahProject/resources/icons/glob.png">Link 1</a>
+        <a href="#"><img src="/RiahProject/resources/icons/glob.png">Link 1</a>
+        <a href="#"><img src="/RiahProject/resources/icons/glob.png">Link 1</a>
+        <a href="#"><img src="/RiahProject/resources/icons/glob.png">Link 1</a>
+        <a href="#"><img src="/RiahProject/resources/icons/glob.png">Link 1</a>
+        <p>//JOHNFOSTER44//</p>
+      </div>
+    </div>
+
+    <div class="clock">
+
+    </div>
+  </nav>
+  <!-- desktop -->
+  <div id="desktop">
+
+    <div class="icon-container">
+
+      <div class="icons">
+        <img data-link="about" class="icon" src="/RiahProject/resources/icons/glob.png">
+        <img data-link="look" class="icon" src="/RiahProject/resources/icons/defrag.png">
+        <img data-link="price" class="icon" src="/RiahProject/resources/icons/disk.png">
+        <img data-link="community" class="icon" src="/RiahProject/resources/icons/book.png">
+        <img data-link="project" class="icon" src="/RiahProject/resources/icons/recycle.png">
+        <img data-link="facebook" class="icon" src="/RiahProject/resources/icons/FBLogo.png">
+        <img data-link="insta" class="icon" src="/RiahProject/resources/icons/IGLogo2.png">
       </div>
 
-      <div class="clock">
-        
-      </div>
-    </nav>
-    <!-- desktop -->
-    <div id="desktop">
+    </div>
+    <!-- this here is the dynamic part xo -->
+    <div id="dtwindow">
+      <div class="draggable">
 
-      <div class="icon-container">
-
-        <div class="icons">
-          <img data-link="about" class="icon" src="/RiahProject/resources/icons/glob.png">
-          <img data-link="look" class="icon" src="/RiahProject/resources/icons/defrag.png">
-          <img data-link="price" class="icon" src="/RiahProject/resources/icons/disk.png">
-          <img data-link="community" class="icon" src="/RiahProject/resources/icons/book.png">
-          <img data-link="project" class="icon" src="/RiahProject/resources/icons/recycle.png">
-          <img data-link="facebook" class="icon" src="/RiahProject/resources/icons/FBLogo.png">
-          <img data-link="insta" class="icon" src="/RiahProject/resources/icons/IGLogo2.png">
-        </div>
-
-      </div>
-<!-- this here is the dynamic part xo -->
-      <div id="dtwindow">
-
-
-        <div class="draggable">
-
-          <div>
-            <div class="window-header"><button id="hide"> RHS</button>RIAH RADIO</div>
+        <div>
+          <div class="window-header"><button id="hide"> RHS</button>RIAH RADIO</div>
           <div class="window-content">
-
+            <!--  -->
             <div class="player">
-
-              <img src="/RiahProject/resources/amp/cover/hyperlife2.jpg" class="album-art"/>
-
+            
+              <img class="album-art" data-amplitude-song-info="cover_art_url"/>
+             
               <div class="meta-container">
-
-                <div class="song-title">SadBoogie</div>
-                <div class="song-artist">hyperlife</div>
-        
+             
+                <div class="song-title" data-amplitude-song-info="name"></div>
+                <div class="song-artist" data-amplitude-song-info="artist"></div>
+             
                 <div class="time-container">
-
+             
                   <div class="current-time">
-                    <span class="amplitude-current-minutes" data-amplitude-song-index="0"></span>:<span class="amplitude-current-seconds" data-amplitude-song-index="0"></span>
+                    <span class="amplitude-current-minutes" data-amplitude-song-index="0"></span>:<span
+                      class="amplitude-current-seconds" data-amplitude-song-index="0"></span>
                   </div>
-        
+             
                   <div class="duration">
-                    <span class="amplitude-duration-minutes" data-amplitude-song-index="0"></span>:<span class="amplitude-duration-seconds" data-amplitude-song-index="0"></span>
+                    <span class="amplitude-duration-minutes" data-amplitude-song-index="0"></span>:<span
+                      class="amplitude-duration-seconds" data-amplitude-song-index="0"></span>
                   </div>
-
+             
                 </div>
-
+             
                 <progress class="amplitude-song-played-progress" data-amplitude-song-index="0" id="song-played-progress-1"></progress>
+             
                 <div class="control-container">
-  
                   <div class="amplitude-prev"></div>
                   <div class="amplitude-play-pause" data-amplitude-song-index="0"></div>
                   <div class="amplitude-next"></div>
-  
+                  <input type="range" class="amplitude-volume-slider"/>
                 </div>
-
+             
               </div>
-
-            </div>
-            
-            <div id="preload">
-              <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/previous.svg"/>
-              <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/play.svg"/>
-              <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/pause.svg"/>
-              <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/next.svg"/>
-            </div>
-
+             </div>
+            <!--  -->
           </div>
         </div>
 
@@ -120,5 +105,6 @@
     <!-- js -->
     <script src="/RiahProject/resources/javascript/script.js"></script>
     <script src="/RiahProject/resources/javascript/amp.js"></script>
-  </body>
+</body>
+
 </html>

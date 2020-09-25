@@ -20,7 +20,6 @@ div.player img.album-art {
 
 div.meta-container {
   float: left;
-  width: calc(100% - 270px);
   padding: 10px;
 }
 div.meta-container div.song-title {
@@ -54,12 +53,6 @@ div.meta-container div.time-container div.duration {
   float: right;
 }
 
-@media screen and (max-width: 39.9375em) {
-  div.meta-container {
-    width: 100%;
-  }
-}
-
 div.control-container {
   text-align: center;
   margin-top: 40px;
@@ -73,8 +66,10 @@ div.control-container div.amplitude-prev {
   vertical-align: middle;
 }
 div.control-container div.amplitude-play-pause {
+  margin: 20px;
   width: 40px;
   height: 44px;
+  border: 1px var(--orange) solid;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
@@ -94,8 +89,17 @@ div.control-container div.amplitude-next {
   vertical-align: middle;
 }
 
-progress.amplitude-song-played-progress:not([value]) {
-  background-color: #313252;
+div.control-container input.amplitude-volume-slider{
+  background-color: #d7dee3;
+  margin-top: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  display: block;
+  cursor: pointer;
+  border: none;
 }
 
 progress.amplitude-song-played-progress {
@@ -104,11 +108,9 @@ progress.amplitude-song-played-progress {
   -moz-appearance: none;
   appearance: none;
   width: 100%;
-  height: 5px;
+  height: 10px;
   display: block;
   cursor: pointer;
-  border-radius: 3px;
-  height: 8px;
   border: none;
 }
 
@@ -123,10 +125,6 @@ progress[value]::-moz-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-  background-color: #00a0ff;
+  background-color: var(--pink);
   border-radius: 3px;
-}
-
-body div#preload {
-  display: none;
 }
