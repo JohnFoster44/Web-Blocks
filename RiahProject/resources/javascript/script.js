@@ -202,6 +202,7 @@ The more problems we see
 `;
 var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`;
 var project = ``;
+var radio = ``;
 
 // Icons Clicked
 document.querySelectorAll(".icon").forEach((item) => {
