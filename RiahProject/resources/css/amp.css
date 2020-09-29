@@ -55,7 +55,6 @@ div.meta-container div.time-container div.duration {
 
 div.control-container {
   text-align: center;
-  margin-top: 40px;
 }
 div.control-container div.amplitude-prev {
   width: 28px;
@@ -69,7 +68,6 @@ div.control-container div.amplitude-play-pause {
   margin: 20px;
   width: 40px;
   height: 44px;
-  border: 1px var(--orange) solid;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
@@ -91,7 +89,7 @@ div.control-container div.amplitude-next {
 
 div.control-container input.amplitude-volume-slider{
   background-color: #d7dee3;
-  margin-top: 20px;
+  margin-top: 10px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -103,15 +101,10 @@ div.control-container input.amplitude-volume-slider{
 }
 
 progress.amplitude-song-played-progress {
-  background-color: #d7dee3;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   width: 100%;
-  height: 10px;
+  height: 5px;
   display: block;
   cursor: pointer;
-  border: none;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -127,4 +120,51 @@ progress[value]::-moz-progress-bar {
 progress[value]::-webkit-progress-value {
   background-color: var(--pink);
   border-radius: 3px;
+}
+
+
+/* VOLUME SLIFDER */
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input[type='range'] {
+    overflow: hidden;
+    width: 80px;
+    -webkit-appearance: none;
+    background-color: #d7dee3;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: var(--pink);
+    margin-top: -1px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 20px;
+    cursor: grab;
+    background: var(--blue);
+    box-shadow: -80px 0 0 80px var(--pink);
+  }
+
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: var(--pink);
+  height: 10px;
+}
+input[type="range"]::-moz-range-track {  
+  background-color: #d7dee3;
+  height: 10px;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: var(--pink);
+  height: 10px;
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: #d7dee3;
+  height: 10px;
 }

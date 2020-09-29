@@ -79,6 +79,9 @@ windowDivCommunity.className = "draggable";
 var windowDivProject = document.createElement("div");
 windowDivProject.className = "draggable";
 
+var riahRadio = document.createElement("div");
+riahRadio.className = "draggable";
+
 // innerHTML window content
 var about = `
     <div id="about" class="window-header"><button id="hide">X</button>About</div>
@@ -202,7 +205,56 @@ The more problems we see
 `;
 var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`;
 var project = ``;
-var radio = ``;
+var radio = `
+<!-- The Music Player -->
+        <div>
+          <div class="window-header"><button id="hide">RHS</button>RIAH RADIO</div>
+          <div class="window-content">
+            <!--  -->
+            <div class="player">
+            
+              <img class="album-art" data-amplitude-song-info="cover_art_url"/>
+             
+              <div class="meta-container">
+             
+                <div class="song-title" data-amplitude-song-info="name"></div>
+                <div class="song-artist" data-amplitude-song-info="artist"></div>
+             
+                <div class="time-container">
+             
+                  <div class="current-time">
+                    <span class="amplitude-current-minutes"></span>:<span
+                      class="amplitude-current-seconds"></span>
+                  </div>
+             
+                  <div class="duration">
+                    <span class="amplitude-duration-minutes"></span>:<span
+                      class="amplitude-duration-seconds"></span>
+                  </div>
+             
+                </div>
+             
+                <progress class="amplitude-song-played-progress" id="song-played-progress"></progress>
+             
+                <div class="control-container">
+                  <div class="amplitude-prev"></div>
+                  <div class="amplitude-play-pause"></div>
+                  <div class="amplitude-next"></div>
+
+                  <div class="amplitude-volume-slider">
+                    <span>-</span>
+                    <input type="range"/>
+                    <span>+</span>
+                  </div>
+                </div>
+             
+              </div>
+             </div>
+            <!--  -->
+          </div>
+        </div>
+      <!-- The Music Player END -->
+`;
 
 // Icons Clicked
 document.querySelectorAll(".icon").forEach((item) => {
@@ -253,17 +305,22 @@ document.querySelectorAll(".icon").forEach((item) => {
   });
 });
 
-// function windowOnLoad() {
-//   desktop.appendChild(windowDivLook);
-//   windowDivLook.innerHTML = look;
-//   windowDivLook.style.top = randomPos(0, wHeight / 2) + "px";
-//   windowDivLook.style.left = randomPos(0, wWidth / 2) + "px";
 
-//   desktop.appendChild(windowDivAbout);
-//   windowDivAbout.innerHTML = about;
-//   windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
-//   windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
-// }
+desktop.appendChild(windowDivAbout);
+windowDivAbout.innerHTML = about;
+windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
+windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
+
+// windows clicked
+
+desktop.addEventListener("click", function(e){
+  console.log(e)
+  console.log(e.x,e.y)
+
+  if (e.target.className === 'window-header'){
+    console.log('bombaclaat')
+  }
+})
 
 // Advert Spawn
 var advertCont = `<div>
@@ -276,28 +333,29 @@ var advertCont = `<div>
   <p>don't want to be a fool for you just another player in your game for two</p>
 </div>
 </div>`;
-// every second
 
-// for (var i = 0; i < 5; i++) {
-//   let parent = document.createElement("div");
-//   parent.className = "draggable";
-//   parent.innerHTML = advertCont;
-//   parent.style.top = randomPos(0, wHeight / 0.8) + "px";
-//   parent.style.left = randomPos(0, wWidth/ 1.4) + "px";
-//   setTimeout(function () {
-//     desktop.append(parent);
-//   }, 1000 * i);
-// }
+// one every second
+for (var i = 0; i < 5; i++) {
+  let parent = document.createElement("div");
+  parent.className = "draggable";
+  parent.innerHTML = advertCont;
+  parent.style.top = randomPos(0, wHeight / 0.8) + "px";
+  parent.style.left = randomPos(0, wWidth / 1.4) + "px";
 
-// var ad = document.createElement("div");
-// ad.className = "draggable";
+  setTimeout(function () {
+    desktop.append(parent);
+  }, 1000 * i);
+}
+
+var ad = document.createElement("div");
+ad.className = "draggable";
 
 // ------ close button -(GET WORKING)---------------------------------------
 var closeButton = document.querySelector("#hide");
 
 document.body.addEventListener("click", function (e) {
   if (e.target.id == "hide") {
-    console.log(e.target.offsetParent)
+    console.log(e.target.offsetParent);
     desktop.removeChild(e.target.offsetParent);
   }
 });
