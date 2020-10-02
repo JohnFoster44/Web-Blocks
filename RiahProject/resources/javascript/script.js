@@ -66,21 +66,28 @@ const desktop = document.querySelector("#dtwindow");
 
 var windowDivAbout = document.createElement("div");
 windowDivAbout.className = "draggable";
+windowDivAbout.setAttribute('data-link', 'about')
 
 var windowDivLook = document.createElement("div");
 windowDivLook.className = "draggable";
+windowDivLook.setAttribute('data-link', 'look')
+
 
 var windowDivPrice = document.createElement("div");
 windowDivPrice.className = "draggable";
+windowDivPrice.setAttribute('data-link', 'price')
 
 var windowDivCommunity = document.createElement("div");
 windowDivCommunity.className = "draggable";
+windowDivCommunity.setAttribute('data-link', 'community')
 
 var windowDivProject = document.createElement("div");
 windowDivProject.className = "draggable";
+windowDivProject.setAttribute('data-link', 'project')
 
 var riahRadio = document.createElement("div");
 riahRadio.className = "draggable";
+riahRadio.setAttribute('data-link', 'radio')
 
 // innerHTML window content
 var about = `
@@ -121,7 +128,7 @@ var about = `
       We gotta take the power back!!!</p></div>
 `;
 var look = `
-<div class="window-header"><button id="hide">X</button>Look</div>
+<div id="look" class="window-header"><button id="hide">X</button>Look</div>
 <div class="window-content">
 <h2>yehhhhh</h2>
 <br>
@@ -163,7 +170,7 @@ var look = `
 </div>
 `;
 var price = `
-<div class="window-header"><button id="hide">X</button>Price</div>
+<div id="price" class="window-header"><button id="hide">X</button>Price</div>
 <div class="window-content">
 <h2>Price</h2>
 <br>
@@ -208,7 +215,7 @@ var project = ``;
 var radio = `
 <!-- The Music Player -->
         <div>
-          <div class="window-header"><button id="hide">RHS</button>RIAH RADIO</div>
+          <div id="radio" class="window-header"><button id="hide">RHS</button>RIAH RADIO</div>
           <div class="window-content">
             <!--  -->
             <div class="player">
@@ -259,8 +266,6 @@ var radio = `
 // Icons Clicked
 document.querySelectorAll(".icon").forEach((item) => {
   item.addEventListener("click", (e) => {
-    console.log(e.target.dataset);
-
     if (e.target.dataset.link === "about") {
       desktop.appendChild(windowDivAbout);
       windowDivAbout.innerHTML = about;
@@ -305,7 +310,6 @@ document.querySelectorAll(".icon").forEach((item) => {
   });
 });
 
-
 desktop.appendChild(windowDivAbout);
 windowDivAbout.innerHTML = about;
 windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
@@ -313,18 +317,38 @@ windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
 
 // windows clicked
 
-desktop.addEventListener("click", function(e){
-  console.log(e)
-  console.log(e.x,e.y)
+document.querySelectorAll("div").forEach((divs) => {
+  divs.addEventListener("click", (e) => {
+    // console.log(e.target.offsetParent);
 
-  if (e.target.className === 'window-header'){
-    console.log('bombaclaat')
-  }
-})
+    if (e.target.offsetParent.className === "draggable") {
+      // desktop.appendChild(windowDivAbout);
+      console.log(e.target)
+      if (e.target.offsetParent.dataset.link === "about") {
+        desktop.appendChild(windowDivAbout);
+      }
+
+      if (e.target.offsetParent.dataset.link=== "look") {
+        desktop.appendChild(windowDivLook);
+      }
+
+      if (e.target.offsetParent.dataset.link === "price") {
+        desktop.appendChild(windowDivPrice);
+      }
+
+      if (e.target.offsetParent.dataset.link === "community") {
+        desktop.appendChild(windowDivCommunity);
+      }
+    }
+  });
+});
 
 // Advert Spawn
+var ad = document.createElement("div");
+ad.className = "draggable";
+
 var advertCont = `<div>
-<div class="window-header"><button id="hide"> RHS</button></div>
+<div id="ad" class="window-header"><button id="hide"> RHS</button></div>
 <div class="window-content">
   <h2>ADVERT! ADVERT! ADVERT! ADVERT!</h3>
   <br>
@@ -346,9 +370,6 @@ for (var i = 0; i < 5; i++) {
     desktop.append(parent);
   }, 1000 * i);
 }
-
-var ad = document.createElement("div");
-ad.className = "draggable";
 
 // ------ close button -(GET WORKING)---------------------------------------
 var closeButton = document.querySelector("#hide");

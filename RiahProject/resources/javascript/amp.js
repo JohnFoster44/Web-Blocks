@@ -9,9 +9,9 @@ Amplitude.init({
       },
   
       {
-        name: "SONG2",
-        artist: "BAND2",
-        album: "EP2",
+        name: "Liquid Wonderment",
+        artist: "hyperlife",
+        album: "EP1",
         url: "resources/amp/tracks/Link Up.mp3",
         cover_art_url: "resources/amp/cover/john-smile.png",
       }
