@@ -66,28 +66,27 @@ const desktop = document.querySelector("#dtwindow");
 
 var windowDivAbout = document.createElement("div");
 windowDivAbout.className = "draggable";
-windowDivAbout.setAttribute('data-link', 'about')
+windowDivAbout.setAttribute("data-link", "about");
 
 var windowDivLook = document.createElement("div");
 windowDivLook.className = "draggable";
-windowDivLook.setAttribute('data-link', 'look')
-
+windowDivLook.setAttribute("data-link", "look");
 
 var windowDivPrice = document.createElement("div");
 windowDivPrice.className = "draggable";
-windowDivPrice.setAttribute('data-link', 'price')
+windowDivPrice.setAttribute("data-link", "price");
 
 var windowDivCommunity = document.createElement("div");
 windowDivCommunity.className = "draggable";
-windowDivCommunity.setAttribute('data-link', 'community')
+windowDivCommunity.setAttribute("data-link", "community");
 
 var windowDivProject = document.createElement("div");
 windowDivProject.className = "draggable";
-windowDivProject.setAttribute('data-link', 'project')
+windowDivProject.setAttribute("data-link", "project");
 
 var riahRadio = document.createElement("div");
 riahRadio.className = "draggable";
-riahRadio.setAttribute('data-link', 'radio')
+riahRadio.setAttribute("data-link", "radio");
 
 // innerHTML window content
 var about = `
@@ -315,6 +314,9 @@ windowDivAbout.innerHTML = about;
 windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
 windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
 
+desktop.appendChild(riahRadio);
+riahRadio.innerHTML = radio;
+
 // windows clicked
 
 document.querySelectorAll("div").forEach((divs) => {
@@ -323,12 +325,12 @@ document.querySelectorAll("div").forEach((divs) => {
 
     if (e.target.offsetParent.className === "draggable") {
       // desktop.appendChild(windowDivAbout);
-      console.log(e.target)
+      console.log(e.target);
       if (e.target.offsetParent.dataset.link === "about") {
         desktop.appendChild(windowDivAbout);
       }
 
-      if (e.target.offsetParent.dataset.link=== "look") {
+      if (e.target.offsetParent.dataset.link === "look") {
         desktop.appendChild(windowDivLook);
       }
 

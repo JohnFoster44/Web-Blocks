@@ -4,6 +4,19 @@
   overflow-x: hidden;
 }
 
+html{
+  background-image: url(/RiahProject/resources/img/crt.png);
+  background-size: 60%;
+  opacity: .90;
+  animation: animatedBackground 40s linear infinite;
+  -webkit-animation: animatedBackground 40s linear infinite;
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 100%; }
+}
+
 @font-face {
   font-family: W95FA;
   src: url("/RiahProject/resources/W95FA/w95fa.woff");
@@ -232,8 +245,8 @@ nav {
 }
 
 .icons img {
-  /* height: auto;
-  width: 40px; */
+  /* height: auto; */
+  width: 32px;
   padding: 8px;
   margin: 5px;
 }
