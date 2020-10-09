@@ -4,17 +4,21 @@
   overflow-x: hidden;
 }
 
-html{
+html {
   background-image: url(/RiahProject/resources/img/crt.png);
   background-size: 60%;
-  opacity: .90;
+  opacity: 0.9;
   animation: animatedBackground 40s linear infinite;
   -webkit-animation: animatedBackground 40s linear infinite;
 }
 
 @keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 0 100%; }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
 }
 
 @font-face {
@@ -135,6 +139,7 @@ nav {
   box-shadow: 6px 6px #00000080;
   position: absolute;
   transform: translate(0px, 0px);
+  overflow-y: hidden;
 }
 
 #drag {
@@ -165,7 +170,6 @@ nav {
   margin: 4px;
   height: 28px;
   font-size: 1.1rem;
-
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -181,14 +185,27 @@ nav {
   border: inset lavender;
   background: lavenderblush;
   margin: 5px;
+  font-size: 1.2em;
+  max-height: 500px;
   padding: 10px;
-  height: 80%;
+  overflow: auto;
+}
+
+.window-content h2 {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.window-content p,
+h2 {
+  overflow: visible;
 }
 
 .image {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
 
 .image img {
@@ -244,11 +261,35 @@ nav {
   -webkit-justify-content: flex-end;
 }
 
-.icons img {
-  /* height: auto; */
+.dtshortcut {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 5px 0 5px;
+}
+
+.dtshortcut img {
   width: 32px;
   padding: 8px;
   margin: 5px;
+}
+
+.multicolor {
+  background-image: linear-gradient(
+    to left,
+    lightblue,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @media (min-width: 768px) {
@@ -258,6 +299,10 @@ nav {
 @media (max-width: 414px) {
   .draggable {
     max-width: 100%;
+  }
+
+  .dtshortcut {
+    font-size: 10px;
   }
 }
 

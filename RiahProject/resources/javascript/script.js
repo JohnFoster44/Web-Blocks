@@ -1,4 +1,4 @@
-// Nav Button ----------------------------------------------------------------------
+// Start Button ----------------------------------------------------------------------
 var dropButton = document.querySelector(".dropbtn");
 
 dropButton.addEventListener("click", function menuButton() {
@@ -92,39 +92,44 @@ riahRadio.setAttribute("data-link", "radio");
 var about = `
     <div id="about" class="window-header"><button id="hide">X</button>About</div>
     <div class="window-content">
-    <h2>Hello!</h2>
-    <br>
-    <p>Welcome to the website, check out how cool it is - probably made by someone realllly handsome i bet idk....</p>
+    <h2>------- The Riah Hair Studio -------</h2>
     <br>
     <p>
-      Yo, we gotta take the power back!//
-      Bam! Here's the plan//
-      Motherfuck Uncle Sam//
-      Step back, I know who I am//
-      Raise up your ear, I'll drop the style and clear//
-      It's the beats and the lyrics they fear//
-      The rage is relentless//
-      We need a movement with a quickness//
-      You are the witness of change//
-      And to counteract//
-      We gotta take the power back
-    </p>
+    As we move into the future, <b>The Riah Hair Studio</b> seeks to totally transform your salon experience.
     <br>
-    <p>The present curriculum//
-      I put my fist in 'em//
-      Eurocentric every last one of 'em//
-      See right through the red, white and blue disguise//
-      With lecture I puncture the structure of lies//
-      Installed in our minds and attempting//
-      To hold us back//
-      We've got to take it back//
-      Holes in our spirit causin' tears and fears//
-      One-sided stories for years and years and years//
-      I'm inferior? Whose inferior?//
-      Yeah, they need to check the interior//
-      Of the system, who gets em about only one culture//
-      And that is why//
-      We gotta take the power back!!!</p></div>
+    <br>
+    <b>Dan Chapman</b> (he/him), Founder of The Riah Hair Studio and previously <em>The Riah Project</em>, began this adventure with one simple goal - <em>to promote complete inclusion within the beauty industry</em>. By ditching beauty standards we allow you beautiful beings the freedom to have a comfortable, judgement free salon experience. 
+    <br>
+    <br>
+    <b>We’re here to help you find the best, unfiltered version of you!</b> 
+    <br>
+    <br>
+    Through supporting local people, businesses and our community The Riah Hair Studio stands strong on creating change and supporting intersectionality, not only in the beauty industry but also this fabulous city of <b>Brighton</b> we call home.
+    <br>
+    <br>
+    The Riah Hair Studio have joined with Dukes Beauty to offer a welcoming and safe salon experience for people from all walks of life. Our services are inclusive for those inside and outside of the binaries, all ages, ethnicities, abilities, sexualities and allies across the board. 
+    <br>
+    <br>
+    Rest assured, all members of our team have completed specialist Inclusion and Intersectionality training, ensuring everyone of you lovely lot receives the salon experience you deserve.
+    <br> 
+    <br> 
+    Enter The Riah Hair Studio and enjoy affordable non-gendered pricing, ethical practices and diverse hair and beauty knowledge and techniques.
+    <br> 
+    <br> 
+
+    <h2>------- What Does Riah Mean? -------</h2>
+    <p>As a proud, queer, neuro-diverse humxn the incorporation of queer history and misspelled words encapsulates my vision and I am so thrilled to welcome you to my world!
+    <br> 
+    <br>  
+    The word <em>Riah</em> - meaning hair, originates from the gay sub cultural language/ cant slang, <b>Polari</b>. It was used throughout multiple centuries and industries by Queer people to identify and navigate life in a society which remained openly hostile and dangerous for them.
+    <br> 
+    <br> 
+    In Polari, “Riah zhoosher” means hairdresser and I’ve always felt it is massively important to respect and reflect our queer history while venturing forward.
+    <br> 
+    <br> 
+    </p> 
+    </p>
+  </div>
 `;
 var look = `
 <div id="look" class="window-header"><button id="hide">X</button>Look</div>
@@ -262,7 +267,7 @@ var radio = `
       <!-- The Music Player END -->
 `;
 
-// Icons Clicked
+// Desktop Icon Click function
 document.querySelectorAll(".icon").forEach((item) => {
   item.addEventListener("click", (e) => {
     if (e.target.dataset.link === "about") {
@@ -309,15 +314,14 @@ document.querySelectorAll(".icon").forEach((item) => {
   });
 });
 
-desktop.appendChild(windowDivAbout);
-windowDivAbout.innerHTML = about;
-windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
-windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
+if (window.innerWidth > 768) {
+  desktop.appendChild(riahRadio);
+  riahRadio.innerHTML = radio;
+  riahRadio.style.top = 10 + "px";
+  riahRadio.style.left = 10 + "px";
+}
 
-desktop.appendChild(riahRadio);
-riahRadio.innerHTML = radio;
-
-// windows clicked
+// window click (bring 2 front)
 
 document.querySelectorAll("div").forEach((divs) => {
   divs.addEventListener("click", (e) => {
@@ -345,12 +349,12 @@ document.querySelectorAll("div").forEach((divs) => {
   });
 });
 
-// Advert Spawn
+// Advert Spam Spawn
 var ad = document.createElement("div");
 ad.className = "draggable";
 
 var advertCont = `<div>
-<div id="ad" class="window-header"><button id="hide"> RHS</button></div>
+<div id="ad" class="window-header"><button id="hide">X</button></div>
 <div class="window-content">
   <h2>ADVERT! ADVERT! ADVERT! ADVERT!</h3>
   <br>
@@ -373,7 +377,17 @@ for (var i = 0; i < 5; i++) {
   }, 1000 * i);
 }
 
-// ------ close button -(GET WORKING)---------------------------------------
+// Load About after SPAM ADS
+setTimeout(function () {
+  desktop.appendChild(windowDivAbout);
+  windowDivAbout.innerHTML = about;
+  if (window.innerWidth > 768) {
+    windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
+    windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
+  }
+}, 6000);
+
+// ------ close button ---------------------------------------
 var closeButton = document.querySelector("#hide");
 
 document.body.addEventListener("click", function (e) {
@@ -390,5 +404,3 @@ function clock() {
   clk.innerHTML = digital;
 }
 setInterval(clock, 1000);
-
-//
