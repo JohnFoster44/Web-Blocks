@@ -1,16 +1,34 @@
-var lastRenderTime = 0;
-const snakeSpeed = 2;
+import {
+  update as updateSnake,
+  draw as drawSnake,
+  snakeSpeed,
+} from "./snake.js";
 
-function main(currentTime){
-    window.requestAnimationFrame(main)
-    const secLastRender = (currentTime - lastRenderTime) / 1000
-    if (secLastRender < 1 / snakeSpeed) return
+import { update as updateFood, draw as drawFood } from "./food.js";
 
-    console.log('render')
-    lastRenderTime = currentTime;
+let lastRenderTime = 0;
+const gameBoard = document.getElementById("game-board");
 
-    update()
-    draw()
+function main(currentTime) {
+  window.requestAnimationFrame(main);
+  const secLastRender = (currentTime - lastRenderTime) / 1000;
+  if (secLastRender < 1 / snakeSpeed) return;
+
+  lastRenderTime = currentTime;
+
+  update();
+  draw();
 }
 
-window.requestAnimationFrame(main)
+window.requestAnimationFrame(main);
+
+function update() {
+  updateSnake();
+  updateFood();
+}
+
+function draw() {
+  gameBoard.innerHTML = "";
+  drawSnake(gameBoard);
+  drawFood(gameBoard);
+}
