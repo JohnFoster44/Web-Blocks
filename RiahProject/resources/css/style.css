@@ -5,7 +5,7 @@
 }
 
 html {
-  background-image: url(/RiahProject/resources/img/crt.png);
+  background-image: url(/resources/img/crt.png);
   background-size: 60%;
   opacity: 0.9;
   animation: animatedBackground 40s linear infinite;
@@ -23,7 +23,7 @@ html {
 
 @font-face {
   font-family: W95FA;
-  src: url("/RiahProject/resources/W95FA/w95fa.woff");
+  src: url("/resources/W95FA/w95fa.woff");
 }
 
 :root {
@@ -230,7 +230,7 @@ h2 {
   flex-direction: column;
   justify-content: space-evenly;
 
-  background-image: url(/RiahProject/resources/img/riah_logo.png);
+  background-image: url(/resources/img/riah_logo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;

@@ -215,7 +215,10 @@ The more problems we see
 </div>
 `;
 var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`;
-var project = ``;
+var project = `
+<p>SNAKE</p>
+<div id="game-board"></div>
+<script src="snek.js" type="module"></script>`;
 var radio = `
 <!-- The Music Player -->
         <div>
@@ -309,7 +312,12 @@ document.querySelectorAll(".icon").forEach((item) => {
     }
 
     if (e.target.dataset.link === "project") {
-      console.log("u crazy son of a birtch");
+      desktop.appendChild(windowDivProject);
+      windowDivProject.innerHTML = project;
+      if (window.innerWidth > 768) {
+        windowDivProject.style.top = randomPos(0, wHeight / 2) + "px";
+        windowDivProject.style.left = randomPos(0, wWidth / 2) + "px";
+      }
     }
   });
 });
