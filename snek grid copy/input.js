@@ -22,7 +22,7 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
-export function getInputDirection() {
+function getInputDirection() {
   lastInputDirection = inputDirection;
   return inputDirection;
 }

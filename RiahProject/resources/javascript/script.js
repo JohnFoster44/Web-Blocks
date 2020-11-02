@@ -215,10 +215,7 @@ The more problems we see
 </div>
 `;
 var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`;
-var project = `
-<p>SNAKE</p>
-<div id="game-board"></div>
-<script src="snek.js" type="module"></script>`;
+var project = `<p>riah</p>`;
 var radio = `
 <!-- The Music Player -->
         <div>
@@ -352,6 +349,10 @@ document.querySelectorAll("div").forEach((divs) => {
 
       if (e.target.offsetParent.dataset.link === "community") {
         desktop.appendChild(windowDivCommunity);
+      }
+
+      if (e.target.offsetParent.dataset.link === "project") {
+        desktop.appendChild(windowDivProject);
       }
     }
   });
