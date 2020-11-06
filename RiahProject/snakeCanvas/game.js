@@ -92,7 +92,7 @@ var GameState = {
         // set heading text
         informationOverlay.style.display = 'block';
         heading.innerHTML = 'START GAME';
-        line1.innerHTML = 'click to start';
+        line1.innerHTML = '(click to start)';
         line2.innerHTML = '';
         score.innerHTML = '';
         break;
@@ -110,7 +110,7 @@ var GameState = {
         // set heading text
         informationOverlay.style.display = 'block';
         heading.innerHTML = 'GAME OVER';
-        line1.innerHTML = 'click to start';
+        line1.innerHTML = '(click to start)';
         line2.innerHTML = 'score: ' + Game.score;
         score.innerHTML = '';
         break;
