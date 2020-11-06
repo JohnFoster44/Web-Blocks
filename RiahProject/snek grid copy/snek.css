@@ -1,0 +1,35 @@
+:root {
+  --bkg: #d0d058;
+  --green2: #a0a840;
+  --green3: #708028;
+  --green4: #405010;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #a0a840;
+}
+
+#game-board {
+  background-color: var(--bkg);
+  width: 100vmin;
+  height: 100vmin;
+  display: grid;
+  grid-template-rows: repeat(21, 1fr);
+  grid-template-columns: repeat(21, 1fr);
+}
+
+.snake {
+  background-color: var(--green4);
+  border: 0.25vmin solid var(--green2);
+}
+
+.food {
+  background-color: var(--green3);
+  border: 0.25vmin solid var(--green2);
+}

@@ -49,7 +49,7 @@ nav {
   padding: 2px 2px 3px 2px;
   justify-content: space-between;
   background: var(--pink);
-  border-bottom: outset var(--orange) 2px;
+  border-bottom: outset var(--pink) 2px;
   font-family: W95FA;
 }
 
