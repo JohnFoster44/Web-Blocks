@@ -76,9 +76,9 @@ var windowDivPrice = document.createElement("div");
 windowDivPrice.className = "draggable";
 windowDivPrice.setAttribute("data-link", "price");
 
-var windowDivCommunity = document.createElement("div");
-windowDivCommunity.className = "draggable";
-windowDivCommunity.setAttribute("data-link", "community");
+var windowDivHours = document.createElement("div");
+windowDivHours.className = "draggable";
+windowDivHours.setAttribute("data-link", "community");
 
 var windowDivProject = document.createElement("div");
 windowDivProject.className = "draggable";
@@ -95,6 +95,7 @@ var about = `
     <h2>------- The Riah Hair Studio -------</h2>
     <br>
     <p>
+    <br>
     As we move into the future, <b>The Riah Hair Studio</b> seeks to totally transform your salon experience.
     <br>
     <br>
@@ -118,7 +119,7 @@ var about = `
     <br> 
 
     <h2>------- What Does Riah Mean? -------</h2>
-    <p>As a proud, queer, neuro-diverse humxn the incorporation of queer history and misspelled words encapsulates my vision and I am so thrilled to welcome you to my world!
+    <p><br>As a proud, queer, neuro-diverse humxn the incorporation of queer history and misspelled words encapsulates my vision and I am so thrilled to welcome you to my world!
     <br> 
     <br>  
     The word <em>Riah</em> - meaning hair, originates from the gay sub cultural language/ cant slang, <b>Polari</b>. It was used throughout multiple centuries and industries by Queer people to identify and navigate life in a society which remained openly hostile and dangerous for them.
@@ -132,9 +133,9 @@ var about = `
   </div>
 `;
 var look = `
-<div id="look" class="window-header"><button id="hide">X</button>Look</div>
+<div id="look" class="window-header"><button id="hide">X</button>Look Book</div>
 <div class="window-content">
-<h2>yehhhhh</h2>
+<h2>WIPWIPWIPWIPWPI</h2>
 <br>
 <p>Welcome to the website, check out how cool it is - probably made by someone realllly handsome i bet idk....</p>
 <br>
@@ -174,70 +175,65 @@ var look = `
 </div>
 `;
 var price = `
-<div id="price" class="window-header"><button id="hide">X</button>Price</div>
-<div class="window-content">
-<h2>Price</h2>
-<br>
-<p>Welcome to the website, check out how cool it is - probably made by someone realllly handsome i bet idk....</p>
-<br>
-<br>
-<p>
-B-I-G P-O-P-P-A, no info for the DEA
-Federal agents mad 'cause I'm flagrant
-Tap my cell and the phone in the basement
-My team supreme, stay clean
-Triple beam lyrical dream, I be that
-Cat you see at all events bent
-Gats in holsters, girls on shoulders
-Playboy, I told ya, mere mics to me
-Bruise too much, I lose too much
-Step on stage, the girls boo too much
-I guess it's 'cause you run with lame dudes too much
-Me lose my touch? Never that!
-If I did, ain't no problem to get the gat
-Where the true players at? Throw your Rollies in the sky
-Wave 'em side to side and keep your hands high
-While I give your girl the eye, player please
-Lyrically, see B.I.G be flossing
-Jig on the cover of Fortune, 5 double O
-Here's my phone number, your man ain't got to know
-I got the dough, got the flow down pizat
-Platinum plus like thizat
-Dangerous on trizacks leave your ass flizat
-I don't know what they want from me
-It's like the more money we come across
-The more problems we see
-</p>
-<br>
-<div class="image" >
-  <img src="/RiahProject/resources/img/pexels-photo-3966569.jpeg" alt="">
-</div>
-</div>
+<div id="about" class="window-header"><button id="hide">X</button>About</div>
+      <div class="window-content">
+        <h2>PRICE LIST</h2>
+
+        <p>Haircut & Blowdry -- £40</p>
+       <p>Blowdry -- £30</p>
+       <p>Clipper work -- £30</p>
+       <p>Hair up -- £30</p>
+       <p>Festival HAIR -- £20</p>
+       <p>Full Head hightlights -- £85</p>
+       <p>Half Head highlights -- £70</p>
+       <p>T-bar Highlight -- £55</p>
+       <p>Full head tint -- £60</p>
+       <p>Root tint -- £50</p>
+       <p>T-bar tint -- £20</p>
+       <p>Balayage -- £85</p>
+       <p>Colour kiss -- £20</p>
+       <p>First time Bleach -- POA</p>
+       <p>Bleach roots -- £75</p>
+       <p>Creative colour -- £75</p>
+       <p>Toner -- £15</p>
+       <p><br>10% NHS DISCOUNT</p>
+      </div>
 `;
-var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`;
+// chnage to hours and add team
+var hours = `
+<div id="hours" class="window-header"><button id="hide">RHS</button>Opening Hours</div>
+      <div class="window-content">
+        <h2>OPENING HOURS</h2>
+        <p>Tuesday 10am - 6pm</p>
+        <p>Wednesday 10am - 6pm</p>
+        <p>Thursday 10am -8pm</p>
+        <p>Friday 10am - 6pm</p>
+        <p>Saturday 9am - 4pm </p>
+        <p>Sunday and Monday on request.</p>
+      </div>
+`;
 var project = `
-<div id="radio" class="window-header"><button id="hide">RHS</button>SNAKE</div>
+<div id="project" class="window-header"><button id="hide">RHS</button>The Riah Project</div>
         <div class="window-content">
-        <div id="game-area">
-        <canvas id="gameCanvas" width="500px" height="500px"></canvas>
-        
-        <div class="score"></div>
-        
-        <div class="information">
-            <div class="text">
-                <div id="heading"></div>
-                <div id="line1"></div>
-                <div id="line2"></div>
-            </div>
-        </div>
-        </div>
-        <script src="/snakeCanvas/game.js"></script>
+          <h2>------ The Riah Project ------</h2>
+          <div>
+            <p>
+            <br>
+             <em><b>The Riah Project</b></em> is a monthly meet up for the LGBTQ+ community to promote wellbeing and self-care. At the Riah Project we will be offering cheap and affordable haircuts for queer people within the community who may not be able to afford it, alongside hosting a variety of queer entertainment such as queer spoken word performers, local artists and creative members of the queer community plus a selection of drinks and refreshments throughout the event.
+              <br>
+              <br>
+              The Riah Project is led by Dan Chapman (he/him), a Senior Stylist at The Riah Hair Studio, fellow queer within the community and recent winner of the Future Talent category at the Sussex Salon Awards. He’ll be offering haircuts priced on what is affordable for you, with the minimum charge being as little as <b>£5</b>. 
+              <br>
+              <br> 
+              As these appointments are very limited, he’ll be working on a first come first serve basis, so in order to secure your appointment time, all you need to do is follow <a href="https://www.instagram.com/theriahproject/?hl=en"><b>@theriahproject</b></a> on Instagram and send a direct message. However if you are unable to get an appointment please feel free to come along, show your support and celebrate our talented queer community.
+            </p>
+          </div>
         </div>
         `;
 var radio = `
 <!-- The Music Player -->
         <div>
-          <div id="radio" class="window-header"><button id="hide">RHS</button>RIAH RADIO</div>
+          <div id="radio" class="window-header">---RIAH RADIO---</div>
           <div class="window-content">
             <!--  -->
             <div class="player">
@@ -316,12 +312,12 @@ document.querySelectorAll(".icon").forEach((item) => {
       console.log("u crazy son of a birtch");
     }
 
-    if (e.target.dataset.link === "community") {
-      desktop.appendChild(windowDivCommunity);
-      windowDivCommunity.innerHTML = community;
+    if (e.target.dataset.link === "hours") {
+      desktop.appendChild(windowDivHours);
+      windowDivHours.innerHTML = hours;
       if (window.innerWidth > 768) {
-        windowDivCommunity.style.top = randomPos(0, wHeight / 2) + "px";
-        windowDivCommunity.style.left = randomPos(0, wWidth / 2) + "px";
+        windowDivHours.style.top = randomPos(0, wHeight / 2) + "px";
+        windowDivHours.style.left = randomPos(0, wWidth / 2) + "px";
       }
       console.log("u crazy son of a birtch");
     }
@@ -337,20 +333,21 @@ document.querySelectorAll(".icon").forEach((item) => {
   });
 });
 
-if (window.innerWidth > 768) {
-  desktop.appendChild(riahRadio);
-  riahRadio.innerHTML = radio;
-  riahRadio.style.top = 10 + "px";
-  riahRadio.style.left = 10 + "px";
-}
+// if (window.innerWidth > 768) {
+//   desktop.appendChild(riahRadio);
+//   riahRadio.innerHTML = radio;
+//   riahRadio.style.top = 10 + "px";
+//   riahRadio.style.left = 10 + "px";
+// }
 
-if (window.innerWidth > 768) {
-  // document.body.appendChild(document.createElement('script')).src = '/snakeCanvas/game.js';
-  desktop.appendChild(windowDivProject);
-  windowDivProject.innerHTML = project;
-  windowDivProject.style.top = 10 + "px";
-  windowDivProject.style.left = 10 + "px";
-}
+// snake stufffff
+// if (window.innerWidth > 768) {
+//   // document.body.appendChild(document.createElement('script')).src = '/snakeCanvas/game.js';
+//   desktop.appendChild(windowDivProject);
+//   windowDivProject.innerHTML = project;
+//   windowDivProject.style.top = 10 + "px";
+//   windowDivProject.style.left = 10 + "px";
+// }
 
 // window click (bring 2 front)
 
@@ -399,17 +396,17 @@ var advertCont = `<div>
 </div>`;
 
 // one every second
-for (var i = 0; i < 5; i++) {
-  let parent = document.createElement("div");
-  parent.className = "draggable";
-  parent.innerHTML = advertCont;
-  parent.style.top = randomPos(0, wHeight / 0.8) + "px";
-  parent.style.left = randomPos(0, wWidth / 1.4) + "px";
+// for (var i = 0; i < 5; i++) {
+//   let parent = document.createElement("div");
+//   parent.className = "draggable";
+//   parent.innerHTML = advertCont;
+//   parent.style.top = randomPos(0, wHeight / 0.8) + "px";
+//   parent.style.left = randomPos(0, wWidth / 1.4) + "px";
 
-  setTimeout(function () {
-    desktop.append(parent);
-  }, 1000 * i);
-}
+//   setTimeout(function () {
+//     desktop.append(parent);
+//   }, 1000 * i);
+// }
 
 // Load About after SPAM ADS
 setTimeout(function () {

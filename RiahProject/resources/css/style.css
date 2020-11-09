@@ -187,8 +187,9 @@ nav {
   margin: 5px;
   font-size: 1.2em;
   max-height: 500px;
-  padding: 10px;
+  padding: 25px;
   overflow: auto;
+  line-height: 25px;
 }
 
 .window-content h2 {
@@ -220,6 +221,12 @@ h2 {
   background-color: var(--pink);
   border: 2px lavender outset;
   box-shadow: 6px 6px #00000080;
+}
+
+.priceList{
+  justify-content: center;
+  line-height: 30px;
+  overflow: visible;
 }
 
 /* -----------------------------DESKTOP--------------------------------- */
