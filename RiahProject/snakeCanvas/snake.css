@@ -1,24 +1,26 @@
+@font-face {
+  font-family: W95FA;
+  src: url("/resources/W95FA/w95fa.woff");
+}
+
 #game-area {
   position: relative;
-  width: 550px;
-  height: 550px;
-  margin: 10px;
-  /* background-image: linear-gradient(45deg, #808080 25%, transparent 25%),
-    linear-gradient(-45deg, #808080 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #808080 75%),
-    linear-gradient(-45deg, transparent 75%, #808080 75%); */
+  width: 500px;
+  height: 500px;
+  margin: 7px;
   background-size: 20px 20px;
   background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: W95FA;
+  overflow: hidden;
 }
 
 #gameCanvas {
   position: absolute;
-  width: calc(100% - 50px);
-  height: calc(100% - 50px);
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
   background-color: #9bbc0f;
   border: 2px solid #8bac0f;
-  margin: 25px;
+  margin: 5px;
 }
 
 .score {
@@ -31,8 +33,10 @@
 
 .information {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  margin: 5px;
+  border: 2px solid rgba(10, 10, 10, 0.4);
   background-color: rgba(10, 10, 10, 0.4);
 }
 
@@ -50,11 +54,11 @@
 }
 
 #heading {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #line1,
 #line2 {
-  font-size: 15px;
+  font-size: 20px;
   padding: 10px;
 }

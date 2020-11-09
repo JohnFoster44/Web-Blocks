@@ -215,7 +215,25 @@ The more problems we see
 </div>
 `;
 var community = `JOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOLJOHN IS COOL`;
-var project = `<p>riah</p>`;
+var project = `
+<div id="radio" class="window-header"><button id="hide">RHS</button>SNAKE</div>
+        <div class="window-content">
+        <div id="game-area">
+        <canvas id="gameCanvas" width="500px" height="500px"></canvas>
+        
+        <div class="score"></div>
+        
+        <div class="information">
+            <div class="text">
+                <div id="heading"></div>
+                <div id="line1"></div>
+                <div id="line2"></div>
+            </div>
+        </div>
+        </div>
+        <script src="/snakeCanvas/game.js"></script>
+        </div>
+        `;
 var radio = `
 <!-- The Music Player -->
         <div>
@@ -326,6 +344,14 @@ if (window.innerWidth > 768) {
   riahRadio.style.left = 10 + "px";
 }
 
+if (window.innerWidth > 768) {
+  // document.body.appendChild(document.createElement('script')).src = '/snakeCanvas/game.js';
+  desktop.appendChild(windowDivProject);
+  windowDivProject.innerHTML = project;
+  windowDivProject.style.top = 10 + "px";
+  windowDivProject.style.left = 10 + "px";
+}
+
 // window click (bring 2 front)
 
 document.querySelectorAll("div").forEach((divs) => {
@@ -334,7 +360,6 @@ document.querySelectorAll("div").forEach((divs) => {
 
     if (e.target.offsetParent.className === "draggable") {
       // desktop.appendChild(windowDivAbout);
-      console.log(e.target);
       if (e.target.offsetParent.dataset.link === "about") {
         desktop.appendChild(windowDivAbout);
       }
