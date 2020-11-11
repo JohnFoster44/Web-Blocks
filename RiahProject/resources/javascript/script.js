@@ -175,7 +175,7 @@ var look = `
 </div>
 `;
 var price = `
-<div id="about" class="window-header"><button id="hide">X</button>About</div>
+<div id="about" class="window-header"><button id="hide">X</button>Price List</div>
       <div class="window-content">
         <h2>PRICE LIST</h2>
 
@@ -280,6 +280,8 @@ var radio = `
         </div>
       <!-- The Music Player END -->
 `;
+var snake = ``;
+var team = ``;
 
 // Desktop Icon Click function
 document.querySelectorAll(".icon").forEach((item) => {
@@ -288,8 +290,8 @@ document.querySelectorAll(".icon").forEach((item) => {
       desktop.appendChild(windowDivAbout);
       windowDivAbout.innerHTML = about;
       if (window.innerWidth > 768) {
-        windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
-        windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
+        windowDivAbout.style.top = randomPos(15, wHeight / 2) + "px";
+        windowDivAbout.style.left = randomPos(10, wWidth / 2) + "px";
       }
     }
 
@@ -297,8 +299,8 @@ document.querySelectorAll(".icon").forEach((item) => {
       desktop.appendChild(windowDivLook);
       windowDivLook.innerHTML = look;
       if (window.innerWidth > 768) {
-        windowDivLook.style.top = randomPos(0, wHeight / 2) + "px";
-        windowDivLook.style.left = randomPos(0, wWidth / 2) + "px";
+        windowDivLook.style.top = randomPos(15, wHeight / 2) + "px";
+        windowDivLook.style.left = randomPos(10, wWidth / 2) + "px";
       }
     }
 
@@ -306,18 +308,17 @@ document.querySelectorAll(".icon").forEach((item) => {
       desktop.appendChild(windowDivPrice);
       windowDivPrice.innerHTML = price;
       if (window.innerWidth > 768) {
-        windowDivPrice.style.top = randomPos(0, wHeight / 2) + "px";
-        windowDivPrice.style.left = randomPos(0, wWidth / 2) + "px";
+        windowDivPrice.style.top = randomPos(15, wHeight / 2) + "px";
+        windowDivPrice.style.left = randomPos(10, wWidth / 2) + "px";
       }
-      console.log("u crazy son of a birtch");
     }
 
     if (e.target.dataset.link === "hours") {
       desktop.appendChild(windowDivHours);
       windowDivHours.innerHTML = hours;
       if (window.innerWidth > 768) {
-        windowDivHours.style.top = randomPos(0, wHeight / 2) + "px";
-        windowDivHours.style.left = randomPos(0, wWidth / 2) + "px";
+        windowDivHours.style.top = randomPos(15, wHeight / 2) + "px";
+        windowDivHours.style.left = randomPos(10, wWidth / 2) + "px";
       }
       console.log("u crazy son of a birtch");
     }
@@ -326,11 +327,70 @@ document.querySelectorAll(".icon").forEach((item) => {
       desktop.appendChild(windowDivProject);
       windowDivProject.innerHTML = project;
       if (window.innerWidth > 768) {
-        windowDivProject.style.top = randomPos(0, wHeight / 2) + "px";
-        windowDivProject.style.left = randomPos(0, wWidth / 2) + "px";
+        windowDivProject.style.top = randomPos(15, wHeight / 2) + "px";
+        windowDivProject.style.left = randomPos(10, wWidth / 2) + "px";
       }
     }
   });
+
+  // Windows on Timer
+  let i = 0;
+  while ( i < 5){
+    opener(i);
+    i++;
+  }
+
+  function opener(i){
+    setTimeout(function(){
+
+      if (i === 0) {
+        desktop.appendChild(windowDivProject);
+        windowDivProject.innerHTML = project;
+        if (window.innerWidth > 768) {
+          windowDivProject.style.top = randomPos(15, wHeight / 2) + "px";
+          windowDivProject.style.left = randomPos(10, wWidth / 2) + "px";
+        }
+      }
+
+      if (i === 1) {
+        desktop.appendChild(windowDivLook);
+        windowDivLook.innerHTML = look;
+        if (window.innerWidth > 768) {
+          windowDivLook.style.top = randomPos(15, wHeight / 2) + "px";
+          windowDivLook.style.left = randomPos(10, wWidth / 2) + "px";
+        }
+      }
+  
+      if (i === 2) {
+        desktop.appendChild(windowDivPrice);
+        windowDivPrice.innerHTML = price;
+        if (window.innerWidth > 768) {
+          windowDivPrice.style.top = randomPos(15, wHeight / 2) + "px";
+          windowDivPrice.style.left = randomPos(10, wWidth / 2) + "px";
+        }
+      }
+  
+      if (i === 3) {
+        desktop.appendChild(windowDivHours);
+        windowDivHours.innerHTML = hours;
+        if (window.innerWidth > 768) {
+          windowDivHours.style.top = randomPos(15, wHeight / 2) + "px";
+          windowDivHours.style.left = randomPos(10, wWidth / 2) + "px";
+        }
+      }
+  
+      if (i === 4) {
+        desktop.appendChild(windowDivAbout);
+        windowDivAbout.innerHTML = about;
+        if (window.innerWidth > 768) {
+          windowDivAbout.style.top = randomPos(15, wHeight / 2) + "px";
+          windowDivAbout.style.left = randomPos(10, wWidth / 2) + "px";
+        }
+      }
+
+      console.log(i)
+    }, 1000 * i)
+  }
 });
 
 // if (window.innerWidth > 768) {
@@ -396,27 +456,28 @@ var advertCont = `<div>
 </div>`;
 
 // one every second
-// for (var i = 0; i < 5; i++) {
-//   let parent = document.createElement("div");
-//   parent.className = "draggable";
-//   parent.innerHTML = advertCont;
-//   parent.style.top = randomPos(0, wHeight / 0.8) + "px";
-//   parent.style.left = randomPos(0, wWidth / 1.4) + "px";
+for (var i = 0; i < 5; i++) {
+  let parent = document.createElement("div");
+  parent.className = "draggable";
+  parent.innerHTML = advertCont;
+  parent.style.top = randomPos(0, wHeight / 0.8) + "px";
+  parent.style.left = randomPos(0, wWidth / 1.4) + "px";
 
-//   setTimeout(function () {
-//     desktop.append(parent);
-//   }, 1000 * i);
-// }
+  setTimeout(function () {
+    desktop.append(parent);
+  }, 500 * i);
+}
 
 // Load About after SPAM ADS
-setTimeout(function () {
-  desktop.appendChild(windowDivAbout);
-  windowDivAbout.innerHTML = about;
-  if (window.innerWidth > 768) {
-    windowDivAbout.style.top = randomPos(0, wHeight / 2) + "px";
-    windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
-  }
-}, 6000);
+
+// setTimeout(function () {
+//   desktop.appendChild(windowDivAbout);
+//   windowDivAbout.innerHTML = about;
+//   if (window.innerWidth > 768) {
+//     windowDivAbout.style.top = randomPos(10, wHeight / 2) + "px";
+//     windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
+//   }
+// }, 6000);
 
 // ------ close button ---------------------------------------
 var closeButton = document.querySelector("#hide");
@@ -435,3 +496,7 @@ function clock() {
   clk.innerHTML = digital;
 }
 setInterval(clock, 1000);
+
+// document.addEventListener('click', (e)=>{
+//   console.log(e)
+// })
