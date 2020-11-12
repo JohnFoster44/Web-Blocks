@@ -72,7 +72,6 @@ nav {
   border: outset 2px;
   cursor: pointer;
   font-family: W95FA;
-  /* font-size: 1.5rem; */
 }
 
 .dropbtn:active {
@@ -233,33 +232,26 @@ h2 {
 
 /* ----------------------------- DESKTOP --------------------------------- */
 #desktop {
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
-
   flex-direction: column;
   justify-content: space-evenly;
-
   background-image: url(/resources/img/riah_logo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
-  z-index: -1;
   overflow-y: hidden;
+  /* z-index: -1; */
 }
 
 #dtwindow {
-  top: 40px;
   position: absolute;
-  z-index: 0;
-  height: 95vh;
+  height: 87vh;
   width: 100vw;
-  border: solid;
-  pointer-events: none;
 }
 
 .icon-container {
   margin-top: 6px;
-  z-index: -1;
 }
 
 .icons img:hover {
@@ -290,24 +282,6 @@ h2 {
   padding: 5px;
   margin: 3px;
 }
-
-/* .multicolor {
-  background-image: linear-gradient(
-    to left,
-    lightblue,
-    violet,
-    indigo,
-    blue,
-    green,
-    yellow,
-    orange,
-    red
-  );
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-} */
 
 @media (min-width: 768px) {
   /*  */
