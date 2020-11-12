@@ -215,7 +215,7 @@ var project = `
 <div id="project" class="window-header"><button id="hide">RHS</button>The Riah Project</div>
         <div class="window-content">
           <h2>------ The Riah Project ------</h2>
-          <div>
+          <p>
             <p>
             <br>
              <em><b>The Riah Project</b></em> is a monthly meet up for the LGBTQ+ community to promote wellbeing and self-care. At the Riah Project we will be offering cheap and affordable haircuts for queer people within the community who may not be able to afford it, alongside hosting a variety of queer entertainment such as queer spoken word performers, local artists and creative members of the queer community plus a selection of drinks and refreshments throughout the event.
@@ -226,12 +226,12 @@ var project = `
               <br> 
               As these appointments are very limited, he’ll be working on a first come first serve basis, so in order to secure your appointment time, all you need to do is follow <a href="https://www.instagram.com/theriahproject/?hl=en"><b>@theriahproject</b></a> on Instagram and send a direct message. However if you are unable to get an appointment please feel free to come along, show your support and celebrate our talented queer community.
             </p>
-          </div>
+          </p>
         </div>
         `;
 var radio = `
 <!-- The Music Player -->
-        <div>
+        <div class="radioStyle">
           <div id="radio" class="window-header">---RIAH RADIO---</div>
           <div class="window-content">
             <!--  -->
@@ -334,14 +334,14 @@ document.querySelectorAll(".icon").forEach((item) => {
 
   // WINDOWS OPEN ON PAGE LOAD EVERY SECOND ------------------------------------
   let i = 0;
-  while (i < 5) {
+  while (i < 6) {
     opener(i);
     i++;
   }
 
   function opener(i) {
     setTimeout(function () {
-      if (i === 0) {
+      if (i === 1) {
         desktop.appendChild(windowDivProject);
         windowDivProject.innerHTML = project;
         if (window.innerWidth > 768) {
@@ -350,7 +350,7 @@ document.querySelectorAll(".icon").forEach((item) => {
         }
       }
 
-      if (i === 1) {
+      if (i === 2) {
         desktop.appendChild(windowDivLook);
         windowDivLook.innerHTML = look;
         if (window.innerWidth > 768) {
@@ -359,16 +359,17 @@ document.querySelectorAll(".icon").forEach((item) => {
         }
       }
 
-      if (i === 2) {
+      if (i === 3) {
         desktop.appendChild(windowDivPrice);
         windowDivPrice.innerHTML = price;
+        windowDivPrice.style.left = 25 + 'px';
         if (window.innerWidth > 768) {
           windowDivPrice.style.top = randomPos(15, wHeight / 2) + "px";
           windowDivPrice.style.left = randomPos(10, wWidth / 2) + "px";
         }
       }
 
-      if (i === 3) {
+      if (i === 4) {
         desktop.appendChild(windowDivHours);
         windowDivHours.innerHTML = hours;
         if (window.innerWidth > 768) {
@@ -377,7 +378,7 @@ document.querySelectorAll(".icon").forEach((item) => {
         }
       }
 
-      if (i === 4) {
+      if (i === 5) {
         desktop.appendChild(windowDivAbout);
         windowDivAbout.innerHTML = about;
         if (window.innerWidth > 768) {
@@ -460,6 +461,7 @@ var advertCont = `<div>
 </div>`;
 
 // ONE EVERY SECOND
+if (window.innerWidth > 768) {
 for (var i = 0; i < 2; i++) {
   let parent = document.createElement("div");
   parent.className = "draggable";
@@ -471,7 +473,7 @@ for (var i = 0; i < 2; i++) {
     desktop.append(parent);
   }, 580 * i);
 }
-
+}
 // CLOSE (X) BUTTON ------------------------------------------------------------
 var closeButton = document.querySelector("#hide");
 

@@ -40,6 +40,7 @@ body {
   height: 100vh;
   color: var(--navy);
   font-family: W95FA;
+  overflow-y: hidden;
 }
 
 /* ------------------------------ NAVBAR ------------------------------ */
@@ -128,7 +129,7 @@ nav {
 /* ------------------------------ DRAGGING / WINDOWS ------------------------------------ */
 .draggable {
   max-width: 70%;
-  max-height: 80%;
+  /* max-height: 80%; */
   touch-action: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -140,7 +141,7 @@ nav {
   box-shadow: 6px 6px #00000080;
   position: absolute;
   transform: translate(0px, 0px);
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 #drag {
@@ -185,11 +186,11 @@ nav {
   flex-direction: column;
   border: inset lavender;
   background: lavenderblush;
-  margin: 5px;
+
+  margin: 4px;
   font-size: 1.2em;
   max-height: 500px;
-  padding: 25px;
-  overflow: auto;
+  padding: 15px;
   line-height: 25px;
 }
 
@@ -232,7 +233,7 @@ h2 {
 
 /* ----------------------------- DESKTOP --------------------------------- */
 #desktop {
-  height: 95vh;
+  height: 100vh;
   width: 100vw;
 
   flex-direction: column;
@@ -242,20 +243,23 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
-
+  z-index: -1;
   overflow-y: hidden;
 }
 
 #dtwindow {
+  top: 40px;
   position: absolute;
-  padding-top: 1px;
   z-index: 0;
-  height: 85vh;
+  height: 95vh;
   width: 100vw;
+  border: solid;
+  pointer-events: none;
 }
 
 .icon-container {
   margin-top: 6px;
+  z-index: -1;
 }
 
 .icons img:hover {
@@ -283,11 +287,11 @@ h2 {
 
 .dtshortcut img {
   width: 32px;
-  padding: 8px;
-  margin: 5px;
+  padding: 5px;
+  margin: 3px;
 }
 
-.multicolor {
+/* .multicolor {
   background-image: linear-gradient(
     to left,
     lightblue,
@@ -303,18 +307,47 @@ h2 {
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-}
+} */
 
 @media (min-width: 768px) {
   /*  */
 }
 
 @media (max-width: 414px) {
+
+  html{
+    /* overflow: hidden; */
+  }
+
+  body{
+    height: 100vh;
+  }
+
+  #dtwindow{
+    overflow-y: auto;
+    height: 568px;
+    background-color: #c8f7ff;
+    border: #ea935a;
+  }
+
+  .window-content {
+    font-size: 0.9em;
+    line-height: 16px;
+  }
+
+  .window-content h2 {
+    font-size: 1em;
+  }
+
   .draggable {
-    max-width: 100%;
+    max-width: 100%; 
   }
 
   .dtshortcut {
     font-size: 10px;
+  }
+
+  .icon-container {
+    margin-top: 0px;
   }
 }
