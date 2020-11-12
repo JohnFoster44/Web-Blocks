@@ -1,4 +1,4 @@
-// Start Button ----------------------------------------------------------------------
+// MENU BUTTON -----------------------------------------------------------------
 var dropButton = document.querySelector(".dropbtn");
 
 dropButton.addEventListener("click", function menuButton() {
@@ -18,7 +18,7 @@ window.onclick = function (e) {
   }
 };
 
-// interact.js ---------------------------------------------------------------------
+// interact.js -----------------------------------------------------------------
 const position = { x: 0, y: 0 };
 
 interact(".draggable").draggable({
@@ -57,38 +57,38 @@ function dragMoveListener(event) {
   target.setAttribute("data-y", y);
 }
 
-// Window POPOP --------------------------------------------------------------------
+// WINDOWS ---------------------------------------------------------------------
 var randomPos = (min, max) => Math.floor(Math.random() * (min, max + 1) + min);
 var wWidth = window.innerWidth;
 var wHeight = window.innerHeight / 2;
-
+// DESKTOP
 const desktop = document.querySelector("#dtwindow");
-
+// ABOUT
 var windowDivAbout = document.createElement("div");
 windowDivAbout.className = "draggable";
 windowDivAbout.setAttribute("data-link", "about");
-
+// LOOKBOOK
 var windowDivLook = document.createElement("div");
 windowDivLook.className = "draggable";
 windowDivLook.setAttribute("data-link", "look");
-
+// PRICES
 var windowDivPrice = document.createElement("div");
 windowDivPrice.className = "draggable";
 windowDivPrice.setAttribute("data-link", "price");
-
+// HOURS
 var windowDivHours = document.createElement("div");
 windowDivHours.className = "draggable";
-windowDivHours.setAttribute("data-link", "community");
-
+windowDivHours.setAttribute("data-link", "hours");
+// RHP
 var windowDivProject = document.createElement("div");
 windowDivProject.className = "draggable";
 windowDivProject.setAttribute("data-link", "project");
-
+// RADIO
 var riahRadio = document.createElement("div");
 riahRadio.className = "draggable";
 riahRadio.setAttribute("data-link", "radio");
 
-// innerHTML window content
+// innerHTML WINDOW CONTENT ----------------------------------------------------
 var about = `
     <div id="about" class="window-header"><button id="hide">X</button>About</div>
     <div class="window-content">
@@ -199,7 +199,6 @@ var price = `
        <p><br>10% NHS DISCOUNT</p>
       </div>
 `;
-// chnage to hours and add team
 var hours = `
 <div id="hours" class="window-header"><button id="hide">RHS</button>Opening Hours</div>
       <div class="window-content">
@@ -283,7 +282,7 @@ var radio = `
 var snake = ``;
 var team = ``;
 
-// Desktop Icon Click function
+// ICON CLICK TOP OPEN WINDOWS -------------------------------------------------
 document.querySelectorAll(".icon").forEach((item) => {
   item.addEventListener("click", (e) => {
     if (e.target.dataset.link === "about") {
@@ -333,16 +332,15 @@ document.querySelectorAll(".icon").forEach((item) => {
     }
   });
 
-  // Windows on Timer
+  // WINDOWS OPEN ON PAGE LOAD EVERY SECOND ------------------------------------
   let i = 0;
-  while ( i < 5){
+  while (i < 5) {
     opener(i);
     i++;
   }
 
-  function opener(i){
-    setTimeout(function(){
-
+  function opener(i) {
+    setTimeout(function () {
       if (i === 0) {
         desktop.appendChild(windowDivProject);
         windowDivProject.innerHTML = project;
@@ -360,7 +358,7 @@ document.querySelectorAll(".icon").forEach((item) => {
           windowDivLook.style.left = randomPos(10, wWidth / 2) + "px";
         }
       }
-  
+
       if (i === 2) {
         desktop.appendChild(windowDivPrice);
         windowDivPrice.innerHTML = price;
@@ -369,7 +367,7 @@ document.querySelectorAll(".icon").forEach((item) => {
           windowDivPrice.style.left = randomPos(10, wWidth / 2) + "px";
         }
       }
-  
+
       if (i === 3) {
         desktop.appendChild(windowDivHours);
         windowDivHours.innerHTML = hours;
@@ -378,7 +376,7 @@ document.querySelectorAll(".icon").forEach((item) => {
           windowDivHours.style.left = randomPos(10, wWidth / 2) + "px";
         }
       }
-  
+
       if (i === 4) {
         desktop.appendChild(windowDivAbout);
         windowDivAbout.innerHTML = about;
@@ -388,19 +386,21 @@ document.querySelectorAll(".icon").forEach((item) => {
         }
       }
 
-      console.log(i)
-    }, 1000 * i)
+      console.log(i);
+    }, 1000 * i);
   }
 });
 
-// if (window.innerWidth > 768) {
-//   desktop.appendChild(riahRadio);
-//   riahRadio.innerHTML = radio;
-//   riahRadio.style.top = 10 + "px";
-//   riahRadio.style.left = 10 + "px";
-// }
+// IF THE WINDOW IS SMALL DONT OPEN THE RADIO ----------------------------------
+if (window.innerWidth > 768) {
+  desktop.appendChild(riahRadio);
+  riahRadio.innerHTML = radio;
+  riahRadio.style.top = 10 + "px";
+  riahRadio.style.left = 10 + "px";
+}
 
-// snake stufffff
+// SNAKE -----------------------------------------------------------------------
+
 // if (window.innerWidth > 768) {
 //   // document.body.appendChild(document.createElement('script')).src = '/snakeCanvas/game.js';
 //   desktop.appendChild(windowDivProject);
@@ -409,7 +409,7 @@ document.querySelectorAll(".icon").forEach((item) => {
 //   windowDivProject.style.left = 10 + "px";
 // }
 
-// window click (bring 2 front)
+// BRING WINDOW TO FRONT ONCLICK -----------------------------------------------
 
 document.querySelectorAll("div").forEach((divs) => {
   divs.addEventListener("click", (e) => {
@@ -429,18 +429,22 @@ document.querySelectorAll("div").forEach((divs) => {
         desktop.appendChild(windowDivPrice);
       }
 
-      if (e.target.offsetParent.dataset.link === "community") {
-        desktop.appendChild(windowDivCommunity);
+      if (e.target.offsetParent.dataset.link === "hours") {
+        desktop.appendChild(windowDivHours);
       }
 
       if (e.target.offsetParent.dataset.link === "project") {
         desktop.appendChild(windowDivProject);
       }
+
+      if (e.target.offsetParent.dataset.link === "radio") {
+        desktop.appendChild(riahRadio);
+      }
     }
   });
 });
 
-// Advert Spam Spawn
+// ADVER SPAMMER SPAWNER -------------------------------------------------------
 var ad = document.createElement("div");
 ad.className = "draggable";
 
@@ -455,8 +459,8 @@ var advertCont = `<div>
 </div>
 </div>`;
 
-// one every second
-for (var i = 0; i < 5; i++) {
+// ONE EVERY SECOND
+for (var i = 0; i < 2; i++) {
   let parent = document.createElement("div");
   parent.className = "draggable";
   parent.innerHTML = advertCont;
@@ -465,21 +469,10 @@ for (var i = 0; i < 5; i++) {
 
   setTimeout(function () {
     desktop.append(parent);
-  }, 500 * i);
+  }, 580 * i);
 }
 
-// Load About after SPAM ADS
-
-// setTimeout(function () {
-//   desktop.appendChild(windowDivAbout);
-//   windowDivAbout.innerHTML = about;
-//   if (window.innerWidth > 768) {
-//     windowDivAbout.style.top = randomPos(10, wHeight / 2) + "px";
-//     windowDivAbout.style.left = randomPos(0, wWidth / 2) + "px";
-//   }
-// }, 6000);
-
-// ------ close button ---------------------------------------
+// CLOSE (X) BUTTON ------------------------------------------------------------
 var closeButton = document.querySelector("#hide");
 
 document.body.addEventListener("click", function (e) {
@@ -489,7 +482,7 @@ document.body.addEventListener("click", function (e) {
   }
 });
 
-// CLOCK ------------------------------------------------------
+// CLOCK -----------------------------------------------------------------------
 var clk = document.querySelector(".clock");
 function clock() {
   var digital = new Date().toLocaleTimeString();
