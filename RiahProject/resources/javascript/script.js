@@ -87,6 +87,10 @@ windowDivProject.setAttribute("data-link", "project");
 var riahRadio = document.createElement("div");
 riahRadio.className = "draggable";
 riahRadio.setAttribute("data-link", "radio");
+// SNAKE
+var windowDivSnake = document.createElement("div");
+windowDivSnake.className = "draggable";
+windowDivSnake.setAttribute("data-link", "radio");
 
 // innerHTML WINDOW CONTENT ----------------------------------------------------
 var about = `
@@ -200,7 +204,7 @@ var price = `
       </div>
 `;
 var hours = `
-<div id="hours" class="window-header"><button id="hide">RHS</button>Opening Hours</div>
+<div id="hours" class="window-header"><button id="hide">X</button>Opening Hours</div>
       <div class="window-content">
         <h2>OPENING HOURS</h2>
         <p>Tuesday 10am - 6pm</p>
@@ -212,7 +216,7 @@ var hours = `
       </div>
 `;
 var project = `
-<div id="project" class="window-header"><button id="hide">RHS</button>The Riah Project</div>
+<div id="project" class="window-header"><button id="hide">X</button>The Riah Project</div>
         <div class="window-content">
           <h2>------ The Riah Project ------</h2>
           <p>
@@ -224,7 +228,10 @@ var project = `
               The Riah Project is led by Dan Chapman (he/him), a Senior Stylist at The Riah Hair Studio, fellow queer within the community and recent winner of the Future Talent category at the Sussex Salon Awards. He’ll be offering haircuts priced on what is affordable for you, with the minimum charge being as little as <b>£5</b>. 
               <br>
               <br> 
-              As these appointments are very limited, he’ll be working on a first come first serve basis, so in order to secure your appointment time, all you need to do is follow <a href="https://www.instagram.com/theriahproject/?hl=en"><b>@theriahproject</b></a> on Instagram and send a direct message. However if you are unable to get an appointment please feel free to come along, show your support and celebrate our talented queer community.
+              As these appointments are very limited he’ll be working on a first come first serve basis - so in order to secure your appointment time, all you need to do is follow <a href="https://www.instagram.com/theriahproject/?hl=en"><b>@theriahproject</b></a> on Instagram and send a direct message.
+              <br>
+              <br>
+              However, if you are unable to get an appointment please feel free to come along, show your support and celebrate our talented queer community.
             </p>
           </p>
         </div>
@@ -279,7 +286,23 @@ var radio = `
         </div>
       <!-- The Music Player END -->
 `;
-var snake = ``;
+var snake = `
+<div id="radio" class="window-header"><button id="hide">RHS</button>SNAKE</div>
+<div class="window-content">
+<div id="game-area">
+<canvas id="gameCanvas" width="500px" height="500px"></canvas>
+
+<div class="score"></div>
+
+<div class="information">
+    <div class="text">
+        <div id="heading"></div>
+        <div id="line1"></div>
+        <div id="line2"></div>
+    </div>
+</div>
+</div>
+</div>`;
 var team = ``;
 
 // ICON CLICK TOP OPEN WINDOWS -------------------------------------------------
@@ -329,6 +352,14 @@ document.querySelectorAll(".icon").forEach((item) => {
         windowDivProject.style.top = randomPos(15, wHeight / 2) + "px";
         windowDivProject.style.left = randomPos(10, wWidth / 2) + "px";
       }
+    }
+
+    if (window.innerWidth > 768) {
+      document.body.appendChild(document.createElement('script')).src = '/snakeCanvas/game.js';
+      desktop.appendChild(windowDivSnake);
+      windowDivSnake.innerHTML = snake;
+      windowDivSnake.style.top = 10 + "px";
+      windowDivSnake.style.left = 10 + "px";
     }
   });
 
@@ -402,13 +433,13 @@ if (window.innerWidth > 768) {
 
 // SNAKE -----------------------------------------------------------------------
 
-// if (window.innerWidth > 768) {
-//   // document.body.appendChild(document.createElement('script')).src = '/snakeCanvas/game.js';
-//   desktop.appendChild(windowDivProject);
-//   windowDivProject.innerHTML = project;
-//   windowDivProject.style.top = 10 + "px";
-//   windowDivProject.style.left = 10 + "px";
-// }
+if (window.innerWidth > 768) {
+  document.body.appendChild(document.createElement('script')).src = '/snakeCanvas/game.js';
+  desktop.appendChild(windowDivSnake);
+  windowDivSnake.innerHTML = snake;
+  windowDivSnake.style.top = 100 + "px";
+  windowDivSnake.style.left = 600 + "px";
+}
 
 // BRING WINDOW TO FRONT ONCLICK -----------------------------------------------
 

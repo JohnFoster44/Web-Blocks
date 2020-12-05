@@ -38,6 +38,7 @@ var GameState = {
   }
   
   window.onload = initializeGame;
+  console.log('gameLoaded')
   
   function initializeGame() {
     Game.context = gameCanvas.getContext('2d');
